@@ -1,18 +1,16 @@
 import { useRouter } from "next/router"
 import Page from "../../components/Page/Page"
-import Signup from "../../components/Signup/Signup"
+import PostItem from "../../components/Posts/PostItem"
 import PostType from "../../interface/Post"
 import { getAllPosts, getPostBySlug } from "../../lib/api"
 import markdownToHtml from "../../lib/remarkToHtml"
-import { toShortFormat } from "../../utils/utils"
-import useStyles from './[slug].styles'
 
 type Props = {
   post: PostType
 }
 
 export default function Post({ post }: Props) {
-  const classes = useStyles()
+
   const router = useRouter()
   if (!router.isFallback && !post?.slug) {
       return <></>
@@ -20,16 +18,7 @@ export default function Post({ post }: Props) {
 
   return (
       <Page>
-        <div className={classes.container}>
-          <h2 className={classes.title}>{post.title}</h2>
-          <span className={classes.date}><time dateTime={ new Date(post.date).toISOString() } itemProp="datePublished">{ toShortFormat(new Date(post.date)) }</time></span>
-          {post.tags && ' - '}
-          {post.tags?.map( (tag : string) => (
-              <span className={classes.tag}>[{tag}]</span>
-          ))}
-          <div dangerouslySetInnerHTML={{ __html: post.content }}/>
-          <Signup />
-        </div>
+        <PostItem title={post.title} content={post.content} date={post.date} tags={post.tags}/> 
       </Page>
   )
 }

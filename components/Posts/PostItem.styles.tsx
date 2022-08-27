@@ -3,6 +3,7 @@ import { white } from '../../constant/colors'
 import { globalPostStyles } from '../../constant/globalPostStyles'
 
 const styles = {
+  '@global': globalPostStyles,
   container: {
     background: white,
     padding: '2rem',
@@ -19,7 +20,6 @@ const styles = {
   tag:{
       color: '#888'
   },
-  '@global': globalPostStyles
 }
 
 export default createUseStyles(styles)

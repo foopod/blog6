@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Page from '../components/Page/Page'
 import Listing from '../components/Posts/Listing'
 import Post from '../interface/Post'
@@ -11,11 +11,7 @@ type Props = {
 }
 
 export default function Index( { allPosts } : Props) {
-  const [posts, setPosts] = useState<Post[]>([])
-
-  useEffect( () => {
-    setPosts(allPosts)
-  }, [])
+  const [posts, setPosts] = useState<Post[]>(allPosts)
 
   const updateFilter = (tag? : string) => {
     let posts = []
