@@ -33,6 +33,10 @@ const styles = {
     },
     textContainer:{
         padding: '0.5rem 1rem',
+        marginBottom: '2rem',
+        '@media (min-width: 768px)': {
+			marginBottom: '0rem'
+		},
     },
     title:{
         margin: '0',

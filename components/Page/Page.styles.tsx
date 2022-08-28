@@ -30,8 +30,11 @@ const styles = {
     },
     container: {
         margin: 'auto',
-        padding : '1rem',
+        padding : '0rem',
         maxWidth: standardPageWidth,
+        '@media (min-width: 768px)': {
+			padding: '1rem'
+		},
     }
 }
 

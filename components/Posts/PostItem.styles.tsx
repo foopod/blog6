@@ -6,12 +6,15 @@ const styles = {
   '@global': globalPostStyles,
   container: {
     background: white,
-    padding: '2rem',
+    padding: '1rem',
     boxShadow: '0 4px 8px 0 rgba(0,0,0,0.2)',
-    marginBottom: '2rem'
+    marginBottom: '2rem',
+    '@media (min-width: 768px)': {
+      padding: '2rem',
+    }
   },
   title: {
-     fontSize: '2.5rem',
+     fontSize: '2rem',
      margin: '0rem 0'
   },
   date: {

@@ -10,7 +10,8 @@ const styles = {
     title:{
         marginTop: '4rem',
         fontSize: '1.5rem',
-        fontFamily: headingfontFamily
+        fontFamily: headingfontFamily,
+        padding: '1rem',
     },
     input:{
         width: '300px',
@@ -28,6 +29,10 @@ const styles = {
         background: black,
         cursor: 'pointer',
         color: white,
+        margin: '1rem',
+        '@media (min-width: 768px)': {
+			margin: '0rem'
+		},
     }
 }
 
