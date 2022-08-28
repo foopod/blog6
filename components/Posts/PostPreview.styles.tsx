@@ -8,16 +8,16 @@ const styles = {
 		alignItems: 'left',
 		boxShadow: '0 4px 8px 0 rgba(0,0,0,0.2)',
 		background: white,
-		margin: '2rem 0', 
+		margin: '2rem 0',
 		position: 'relative',
 		flexDirection: 'column',
 		'@media (min-width: 768px)': {
 			flexDirection: 'row',
 			alignItems: 'center',
 			transition: 'transform .2s',
-			'&:hover':{
+			'&:hover': {
 				boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2)',
-				transform: 'scale(1.1)'
+				transform: 'scale(1.1)',
 			},
 		},
 	},
@@ -31,37 +31,37 @@ const styles = {
 			maxWidth: '300px',
 		},
 	},
-	textContainer:{
+	textContainer: {
 		padding: '0.5rem 1rem',
 		marginBottom: '2rem',
 		'@media (min-width: 768px)': {
-			marginBottom: '0rem'
+			marginBottom: '0rem',
 		},
 	},
-	title:{
+	title: {
 		margin: '0',
 		padding: '0',
-		lineHeight: '1.4'
+		lineHeight: '1.4',
 	},
 	date: {
 		margin: '0',
 	},
-	tag:{
-		color: '#888'
+	tag: {
+		color: '#888',
 	},
-	readTime:{
+	readTime: {
 		color: white,
 		position: 'absolute',
-		right : '0',
+		right: '0',
 		bottom: '0',
-		textDecoration : 'none',
+		textDecoration: 'none',
 		background: black,
-		padding : '0.5rem 1rem'
+		padding: '0.5rem 1rem',
 	},
 	link: {
-		textDecoration : 'none',
-		color: 'black'
-	}
+		textDecoration: 'none',
+		color: 'black',
+	},
 }
 
 export default createUseStyles(styles)

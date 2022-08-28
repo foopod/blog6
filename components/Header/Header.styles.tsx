@@ -8,9 +8,9 @@ const styles = {
 		textAlign: 'center',
 		color: black,
 	},
-	link:{
+	link: {
 		textDecoration: 'none',
-	}
+	},
 }
 
 export default createUseStyles(styles)

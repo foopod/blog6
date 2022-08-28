@@ -4,33 +4,47 @@ import PostType from '../../interface/Post'
 import { toShortFormat } from '../../utils/utils'
 import useStyles from './PostItem.styles'
 
-interface Props{
-    post:  PostType
+interface Props {
+	post: PostType
 }
 
-const PostItem = ({post}: Props) => {
+const PostItem = ({ post }: Props) => {
 	const classes = useStyles()
-    
-	return (<>
-		<div className={classes.container}>
-			<h2 className={classes.title}>{post.title}</h2>
-			<span className={classes.date}><time dateTime={ new Date(post.date).toISOString() } itemProp="datePublished">{ toShortFormat(new Date(post.date)) }</time></span>
-			{post.tags && ' - '}
-			{post.tags?.map( (tag : string) => (
-				<span className={classes.tag} key={tag}>[{tag}]</span>
-			))}
-			<div dangerouslySetInnerHTML={{ __html: post.content }}/>
-		</div>
-		<div className={classes.buttonContainer}>
-			{post.previous &&
-            <a href={`/post/${post.previous}`} className={classes.link}><FontAwesomeIcon icon={faAngleLeft} size={'2x'}/> Previous Post</a>
-			}
-			<span></span>
-			{post.next &&
-            <a href={`/post/${post.next}`} className={classes.link}>Next Post <FontAwesomeIcon icon={faAngleRight} size={'2x'}/></a>
-			}
-		</div>
-	</>
+
+	return (
+		<>
+			<div className={classes.container}>
+				<h2 className={classes.title}>{post.title}</h2>
+				<span className={classes.date}>
+					<time
+						dateTime={new Date(post.date).toISOString()}
+						itemProp="datePublished"
+					>
+						{toShortFormat(new Date(post.date))}
+					</time>
+				</span>
+				{post.tags && ' - '}
+				{post.tags?.map((tag: string) => (
+					<span className={classes.tag} key={tag}>
+						[{tag}]
+					</span>
+				))}
+				<div dangerouslySetInnerHTML={{ __html: post.content }} />
+			</div>
+			<div className={classes.buttonContainer}>
+				{post.previous && (
+					<a href={`/post/${post.previous}`} className={classes.link}>
+						<FontAwesomeIcon icon={faAngleLeft} size={'2x'} /> Previous Post
+					</a>
+				)}
+				<span></span>
+				{post.next && (
+					<a href={`/post/${post.next}`} className={classes.link}>
+						Next Post <FontAwesomeIcon icon={faAngleRight} size={'2x'} />
+					</a>
+				)}
+			</div>
+		</>
 	)
 }
 

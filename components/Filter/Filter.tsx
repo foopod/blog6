@@ -1,26 +1,27 @@
 import useStyles from './Filter.styles'
 
-interface Props{
-    optionList : string[]
-    onSelect : (tag? :string) => void
+interface Props {
+	optionList: string[]
+	onSelect: (tag?: string) => void
 }
 
-const Filter: React.FC<Props> = ({optionList, onSelect}) => {
+const Filter: React.FC<Props> = ({ optionList, onSelect }) => {
 	const classes = useStyles()
 
 	const onChange = () => {
-		const tag = (document.getElementById('tagFilter') as HTMLSelectElement).selectedOptions[0].value
-		if(tag === 'all'){
+		const tag = (document.getElementById('tagFilter') as HTMLSelectElement)
+			.selectedOptions[0].value
+		if (tag === 'all') {
 			onSelect()
 		} else {
 			onSelect(tag)
 		}
 	}
-    
-	return  (
+
+	return (
 		<div className={classes.container}>
 			<p>Filter by</p>
-			<select onChange={onChange} id='tagFilter' className={classes.select}>
+			<select onChange={onChange} id="tagFilter" className={classes.select}>
 				<option>all</option>
 				{optionList.map((option) => {
 					return <option key={option}>{option}</option>

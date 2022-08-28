@@ -5,15 +5,15 @@ import { headingfontFamily } from '../../constant/jss-vars'
 const styles = {
 	container: {
 		textAlign: 'center',
-		margin: '4rem 0'
+		margin: '4rem 0',
 	},
-	title:{
+	title: {
 		marginTop: '4rem',
 		fontSize: '1.5rem',
 		fontFamily: headingfontFamily,
 		padding: '1rem',
 	},
-	input:{
+	input: {
 		width: '300px',
 		padding: '.7em',
 		fontSize: '16px',
@@ -21,7 +21,7 @@ const styles = {
 		border: `${grey} 2px solid`,
 		color: '#222',
 	},
-	submit:{
+	submit: {
 		width: '150px',
 		composes: '$input',
 		border: `${black} 2px solid`,
@@ -31,9 +31,9 @@ const styles = {
 		color: white,
 		margin: '1rem',
 		'@media (min-width: 768px)': {
-			margin: '0rem'
+			margin: '0rem',
 		},
-	}
+	},
 }
 
 export default createUseStyles(styles)

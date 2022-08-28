@@ -9,11 +9,10 @@ import { getAllPosts, getPostBySlug } from '../../lib/api'
 import markdownToHtml from '../../lib/remarkToHtml'
 
 type Props = {
-  post: PostType
+	post: PostType
 }
 
 export default function Post({ post }: Props) {
-
 	const router = useRouter()
 	if (!router.isFallback && !post?.slug) {
 		return <></>
@@ -25,7 +24,7 @@ export default function Post({ post }: Props) {
 				<title>{`Jono Shields - ${post.title}`}</title>
 			</Head>
 			<Page>
-				<PostItem post={post} /> 
+				<PostItem post={post} />
 				<Signup />
 				<ScrollToTop />
 			</Page>
@@ -34,10 +33,10 @@ export default function Post({ post }: Props) {
 }
 
 type Params = {
-    params: {
-      slug: string
-    }
-  }
+	params: {
+		slug: string
+	}
+}
 
 export async function getStaticProps({ params }: Params) {
 	const posts = getAllPosts(['slug', 'date'])
@@ -52,12 +51,12 @@ export async function getStaticProps({ params }: Params) {
 	const index = posts.findIndex((p) => {
 		return post.slug === p.slug
 	})
-	
-	if(index > 0){
+
+	if (index > 0) {
 		post.next = posts[index - 1].slug
 	}
 
-	if(index < posts.length - 1){
+	if (index < posts.length - 1) {
 		post.previous = posts[index + 1].slug
 	}
 
@@ -75,7 +74,7 @@ export async function getStaticProps({ params }: Params) {
 
 export async function getStaticPaths() {
 	const posts = getAllPosts(['slug'])
-  
+
 	return {
 		paths: posts.map((post) => {
 			return {

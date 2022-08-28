@@ -11,30 +11,30 @@ const styles = {
 		marginBottom: '2rem',
 		'@media (min-width: 768px)': {
 			padding: '2rem',
-		}
+		},
 	},
 	title: {
 		fontSize: '2rem',
 		margin: '0rem 0',
-		lineHeight: '1.4'
+		lineHeight: '1.4',
 	},
 	date: {
 		margin: '0',
 	},
-	tag:{
-		color: '#888'
+	tag: {
+		color: '#888',
 	},
 	buttonContainer: {
 		display: 'flex',
-		justifyContent: 'space-between'
+		justifyContent: 'space-between',
 	},
 	link: {
 		display: 'flex',
 		alignItems: 'center',
 		padding: '0 1rem',
-		'& svg':{
-			padding: '0.5rem'
-		}
+		'& svg': {
+			padding: '0.5rem',
+		},
 	},
 }
 

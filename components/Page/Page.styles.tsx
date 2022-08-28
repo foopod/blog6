@@ -1,18 +1,23 @@
 import { createUseStyles } from 'react-jss'
 import { grey } from '../../constant/colors'
-import { headingfontFamily, standardFontFamily, standardPageWidth } from '../../constant/jss-vars'
+import {
+	headingfontFamily,
+	standardFontFamily,
+	standardPageWidth,
+} from '../../constant/jss-vars'
 
 const styles = {
 	'@font-face': [
 		{
 			fontFamily: 'Montserrat',
 			src: 'url(/fonts/Montserrat-Bold.ttf) format(truetype)',
-		},{
+		},
+		{
 			fontFamily: 'FiraSans',
 			src: 'url(/fonts/FiraSans-Regular.ttf) format(truetype)',
-		}
+		},
 	],
-	'@global':{
+	'@global': {
 		'html, body': {
 			padding: 0,
 			margin: 0,
@@ -26,16 +31,16 @@ const styles = {
 		},
 		'h1,h2,h3,h4,h5,h6': {
 			fontFamily: headingfontFamily,
-		}
+		},
 	},
 	container: {
 		margin: 'auto',
-		padding : '0rem',
+		padding: '0rem',
 		maxWidth: standardPageWidth,
 		'@media (min-width: 768px)': {
-			padding: '1rem'
+			padding: '1rem',
 		},
-	}
+	},
 }
 
 export default createUseStyles(styles)

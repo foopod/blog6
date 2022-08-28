@@ -9,8 +9,8 @@ const styles = {
 	goUp: {
 		fontFamily: headingfontFamily,
 		fontWeight: 'bold',
-		fontSize: '1.2rem'
-	}
+		fontSize: '1.2rem',
+	},
 }
 
 export default createUseStyles(styles)

@@ -12,7 +12,7 @@ const styles = {
 		background: white,
 		padding: '0.5rem',
 		border: 'none',
-		margin: '0 0 0 1rem'
+		margin: '0 0 0 1rem',
 	},
 }
 

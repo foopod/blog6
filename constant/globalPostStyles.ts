@@ -1,7 +1,7 @@
 import { black, darkGrey, white } from './colors'
 
 export const globalPostStyles = {
-	'img':{
+	img: {
 		margin: 'auto',
 		display: 'block',
 		width: '100%',
@@ -11,7 +11,7 @@ export const globalPostStyles = {
 			width: '70%',
 		},
 	},
-	'pre':{
+	pre: {
 		background: darkGrey,
 		width: '100%',
 		fontFamily: 'monospace',
@@ -19,23 +19,23 @@ export const globalPostStyles = {
 		padding: '10px 20px',
 		marginLeft: '-20px',
 	},
-	'code':{
+	code: {
 		background: darkGrey,
 		color: white,
-		fontSize: '0.8rem'
+		fontSize: '0.8rem',
 	},
-	'a':{
-		color: black
+	a: {
+		color: black,
 	},
-	'iframe, video, table':{
-		width: '100%'
+	'iframe, video, table': {
+		width: '100%',
 	},
-	'table':{
-		borderCollapse: 'collapse'
+	table: {
+		borderCollapse: 'collapse',
 	},
-	'td,th':{
+	'td,th': {
 		border: '1px black solid',
 		padding: '0.2rem',
-		textAlign: 'center'
-	}
+		textAlign: 'center',
+	},
 }

@@ -8,16 +8,16 @@ import Filter from '../components/Filter/Filter'
 import Head from 'next/head'
 
 type Props = {
-  allPosts: Post[]
+	allPosts: Post[]
 }
 
-export default function Index( { allPosts } : Props) {
+export default function Index({ allPosts }: Props) {
 	const [posts, setPosts] = useState<Post[]>([...allPosts])
 
-	const updateFilter = (tag? : string) => {
+	const updateFilter = (tag?: string) => {
 		let posts = []
-		if(tag){
-			posts = allPosts.filter( post => {
+		if (tag) {
+			posts = allPosts.filter((post) => {
 				return post.tags?.indexOf(tag) >= 0
 			})
 		} else {
@@ -38,7 +38,6 @@ export default function Index( { allPosts } : Props) {
 		</>
 	)
 }
-
 
 export const getStaticProps = async () => {
 	const allPosts = getAllPosts([

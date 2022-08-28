@@ -36,12 +36,12 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
 
 	const wpm = 225
 	const words = content.trim().split(/\s+/).length
-	items['readTime'] = Math.ceil(words/wpm) + ' mins'
+	items['readTime'] = Math.ceil(words / wpm) + ' mins'
 
 	return items
 }
 
-export function getAllPostsOfTag(fields: string[] = [], tag : string){
+export function getAllPostsOfTag(fields: string[] = [], tag: string) {
 	const posts = getAllPosts(fields)
 	const byTag = posts.filter((post) => {
 		return tag === post['tag']
@@ -52,8 +52,10 @@ export function getAllPostsOfTag(fields: string[] = [], tag : string){
 export function getAllPosts(fields: string[] = []) {
 	const slugs = getPostSlugs()
 	const posts = slugs
-		.map(slug => getPostBySlug(slug, fields))
+		.map((slug) => getPostBySlug(slug, fields))
 		// sort posts by date in descending order
-		.sort((post1, post2) => (new Date(post1.date) > new Date(post2.date) ? -1 : 1))
+		.sort((post1, post2) =>
+			new Date(post1.date) > new Date(post2.date) ? -1 : 1
+		)
 	return posts
 }
