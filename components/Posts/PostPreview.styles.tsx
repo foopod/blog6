@@ -8,17 +8,17 @@ const styles = {
 		alignItems: 'left',
 		boxShadow: '0 4px 8px 0 rgba(0,0,0,0.2)',
 		background: white,
-		transition: 'transform .2s',
-		'&:hover':{
-			boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2)',
-			transform: 'scale(1.1)'
-		},
 		margin: '2rem 0', 
 		position: 'relative',
 		flexDirection: 'column',
 		'@media (min-width: 768px)': {
 			flexDirection: 'row',
 			alignItems: 'center',
+			transition: 'transform .2s',
+			'&:hover':{
+				boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2)',
+				transform: 'scale(1.1)'
+			},
 		},
 	},
 	image: {

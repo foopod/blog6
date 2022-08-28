@@ -5,6 +5,7 @@ const styles = {
 	container: {
 		display: 'flex',
 		justifyContent: 'right',
+		padding: '1rem',
 	},
 	select: {
 		color: black,

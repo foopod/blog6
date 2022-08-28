@@ -4,10 +4,12 @@ export const globalPostStyles = {
 	'img':{
 		margin: 'auto',
 		display: 'block',
-		width: '70%',
+		width: '100%',
 		imageRendering: 'pixelated',
-		padding: '0.5rem',
-		background: black
+		background: black,
+		'@media (min-width: 768px)': {
+			width: '70%',
+		},
 	},
 	'pre':{
 		background: darkGrey,
@@ -35,6 +37,5 @@ export const globalPostStyles = {
 		border: '1px black solid',
 		padding: '0.2rem',
 		textAlign: 'center'
-      
 	}
 }
