@@ -1,11 +1,11 @@
 import App from 'next/app'
 
 export default class MyApp extends App {
-  componentDidMount () {
-    const style = document.getElementById('server-side-styles') as HTMLElement
+	componentDidMount () {
+		const style = document.getElementById('server-side-styles') as HTMLElement
 
-    if (style?.parentNode) {
-      style.parentNode.removeChild(style)
-    }
-  }
+		if (style?.parentNode) {
+			style.parentNode.removeChild(style)
+		}
+	}
 }

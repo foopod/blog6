@@ -1,40 +1,40 @@
-import { black, darkGrey, grey, white } from "./colors";
+import { black, darkGrey, white } from './colors'
 
 export const globalPostStyles = {
-    'img':{
-      margin: 'auto',
-      display: 'block',
-      width: '70%',
-      imageRendering: 'pixelated',
-      padding: '0.5rem',
-      background: black
-    },
-    'pre':{
-      background: darkGrey,
-      width: '100%',
-      fontFamily: 'monospace',
-      overflow: 'auto',
-      padding: '2rem',
-      marginLeft: '-2rem',
-    },
-    'code':{
-      background: darkGrey,
-      color: white,
-      fontSize: '0.8rem'
-    },
-    'a':{
-      color: black
-    },
-    'iframe, video, table':{
-      width: '100%'
-    },
-    'table':{
-      borderCollapse: 'collapse'
-    },
-    'td,th':{
-      border: '1px black solid',
-      padding: '0.2rem',
-      textAlign: 'center'
+	'img':{
+		margin: 'auto',
+		display: 'block',
+		width: '70%',
+		imageRendering: 'pixelated',
+		padding: '0.5rem',
+		background: black
+	},
+	'pre':{
+		background: darkGrey,
+		width: '100%',
+		fontFamily: 'monospace',
+		overflow: 'auto',
+		padding: '2rem',
+		marginLeft: '-2rem',
+	},
+	'code':{
+		background: darkGrey,
+		color: white,
+		fontSize: '0.8rem'
+	},
+	'a':{
+		color: black
+	},
+	'iframe, video, table':{
+		width: '100%'
+	},
+	'table':{
+		borderCollapse: 'collapse'
+	},
+	'td,th':{
+		border: '1px black solid',
+		padding: '0.2rem',
+		textAlign: 'center'
       
-    }
-  }
+	}
+}

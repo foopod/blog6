@@ -1,5 +1,5 @@
-import { ReactNode } from "react"
-import Header from "../Header/Header"
+import { ReactNode } from 'react'
+import Header from '../Header/Header'
 import useStyles from './Page.styles'
 
 interface Props{
@@ -7,15 +7,15 @@ interface Props{
 }
 
 const Page  = ({children}: Props) => {
-    const classes = useStyles()
+	const classes = useStyles()
 
-    return (<>
-            <Header />
-            <div className={classes.container}>
-                {children}
-            </div>
-        </>
-    )
+	return (<>
+		<Header />
+		<div className={classes.container}>
+			{children}
+		</div>
+	</>
+	)
 }
 
 export default Page
