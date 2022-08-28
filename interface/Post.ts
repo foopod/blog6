@@ -7,6 +7,8 @@ type PostType = {
   tags: string[]
   image: string
   readTime: string
+  next?: string
+  previous?: string
 }
 
 export default PostType

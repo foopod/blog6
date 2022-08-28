@@ -1,26 +1,36 @@
+import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import PostType from '../../interface/Post'
 import { toShortFormat } from '../../utils/utils'
 import useStyles from './PostItem.styles'
 
 interface Props{
-    title:  string
-    date: string
-    tags: string[]
-    content: string
+    post:  PostType
 }
 
-const PostItem = ({title, date, tags, content}: Props) => {
+const PostItem = ({post}: Props) => {
 	const classes = useStyles()
     
-	return (
+	return (<>
 		<div className={classes.container}>
-			<h2 className={classes.title}>{title}</h2>
-			<span className={classes.date}><time dateTime={ new Date(date).toISOString() } itemProp="datePublished">{ toShortFormat(new Date(date)) }</time></span>
-			{tags && ' - '}
-			{tags?.map( (tag : string) => (
+			<h2 className={classes.title}>{post.title}</h2>
+			<span className={classes.date}><time dateTime={ new Date(post.date).toISOString() } itemProp="datePublished">{ toShortFormat(new Date(post.date)) }</time></span>
+			{post.tags && ' - '}
+			{post.tags?.map( (tag : string) => (
 				<span className={classes.tag} key={tag}>[{tag}]</span>
 			))}
-			<div dangerouslySetInnerHTML={{ __html: content }}/>
+			<div dangerouslySetInnerHTML={{ __html: post.content }}/>
 		</div>
+        <div className={classes.buttonContainer}>
+        {post.previous &&
+            <a href={`/post/${post.previous}`} className={classes.link}><FontAwesomeIcon icon={faAngleLeft} size={'2x'}/> Previous Post</a>
+        }
+        <span></span>
+        {post.next &&
+            <a href={`/post/${post.next}`} className={classes.link}>Next Post <FontAwesomeIcon icon={faAngleRight} size={'2x'}/></a>
+        }
+    </div>
+    </>
 	)
 }
 

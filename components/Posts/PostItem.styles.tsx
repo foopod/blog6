@@ -23,6 +23,18 @@ const styles = {
 	tag:{
 		color: '#888'
 	},
+  buttonContainer: {
+    display: 'flex',
+    justifyContent: 'space-between'
+  },
+  link: {
+    display: 'flex',
+    alignItems: 'center',
+    padding: '0 1rem',
+    '& svg':{
+      padding: '0.5rem'
+    }
+  },
 }
 
 export default createUseStyles(styles)

@@ -25,7 +25,7 @@ export default function Post({ post }: Props) {
 				<title>{`Jono Shields - ${post.title}`}</title>
 			</Head>
 			<Page>
-				<PostItem title={post.title} content={post.content} date={post.date} tags={post.tags}/> 
+				<PostItem post={post} /> 
 				<Signup />
 				<ScrollToTop />
 			</Page>
@@ -40,13 +40,27 @@ type Params = {
   }
 
 export async function getStaticProps({ params }: Params) {
+	const posts = getAllPosts(['slug', 'date'])
 	const post = getPostBySlug(params.slug, [
 		'title',
 		'date',
 		'slug',
 		'content',
-		'tags'
+		'tags',
 	])
+
+	const index = posts.findIndex((p) => {
+		return post.slug === p.slug
+	})
+	
+	if(index > 0){
+		post.next = posts[index - 1].slug
+	}
+
+	if(index < posts.length - 1){
+		post.previous = posts[index + 1].slug
+	}
+
 	const content = await markdownToHtml(post.content || '')
 
 	return {
