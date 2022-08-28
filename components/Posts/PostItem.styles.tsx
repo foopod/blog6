@@ -15,7 +15,8 @@ const styles = {
 	},
 	title: {
 		fontSize: '2rem',
-		margin: '0rem 0'
+		margin: '0rem 0',
+    lineHeight: '1.4'
 	},
 	date: {
 		margin: '0',

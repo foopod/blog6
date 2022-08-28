@@ -41,6 +41,7 @@ const styles = {
 	title:{
 		margin: '0',
 		padding: '0',
+        lineHeight: '1.4'
 	},
 	date: {
 		margin: '0',
