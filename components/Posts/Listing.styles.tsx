@@ -2,7 +2,7 @@ import { createUseStyles } from 'react-jss'
 
 const styles = {
 	container: {
-		padding: '1rem'
+		padding: '0 1rem'
 	},
 }
 
