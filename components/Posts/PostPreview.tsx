@@ -10,7 +10,7 @@ const PostPreview  = ({post}: Props) => {
 	const classes = useStyles()
 
 	return (
-		<a href={`/posts/${post.slug}`} className={classes.link}>
+		<a href={`/post/${post.slug}`} className={classes.link}>
 			<div className={classes.container}>
 				{post.image &&
                         <img alt='' className={classes.image} src={post.image}/>
