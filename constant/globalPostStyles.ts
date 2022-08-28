@@ -16,8 +16,8 @@ export const globalPostStyles = {
 		width: '100%',
 		fontFamily: 'monospace',
 		overflow: 'auto',
-		padding: '2rem',
-		marginLeft: '-2rem',
+		padding: '10px 20px',
+		marginLeft: '-20px',
 	},
 	'code':{
 		background: darkGrey,
