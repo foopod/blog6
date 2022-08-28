@@ -1,3 +1,4 @@
+import Head from "next/head"
 import { useRouter } from "next/router"
 import Page from "../../components/Page/Page"
 import PostItem from "../../components/Posts/PostItem"
@@ -17,9 +18,14 @@ export default function Post({ post }: Props) {
     }
 
   return (
+    <>
+      <Head>
+        <title>Jono Shields - {post.title}</title>
+      </Head>
       <Page>
         <PostItem title={post.title} content={post.content} date={post.date} tags={post.tags}/> 
       </Page>
+    </>
   )
 }
 

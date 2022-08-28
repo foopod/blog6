@@ -5,13 +5,14 @@ import Post from '../interface/Post'
 import { getAllPosts } from '../lib/api'
 import { tags } from '../constant/config'
 import Filter from '../components/Filter/Filter'
+import Head from 'next/head'
 
 type Props = {
   allPosts: Post[]
 }
 
 export default function Index( { allPosts } : Props) {
-  const [posts, setPosts] = useState<Post[]>(allPosts)
+  const [posts, setPosts] = useState<Post[]>([...allPosts])
 
   const updateFilter = (tag? : string) => {
     let posts = []
@@ -26,10 +27,15 @@ export default function Index( { allPosts } : Props) {
   }
 
   return (
-    <Page>
-      <Filter optionList={tags} onSelect={updateFilter} />
-      <Listing posts={posts} />
-    </Page>
+    <>
+      <Head>
+        <title>Jono Shields - All Posts</title>
+      </Head>
+      <Page>
+        <Filter optionList={tags} onSelect={updateFilter} />
+        <Listing posts={posts} />
+      </Page>
+    </>
   )
 }
 
