@@ -21,16 +21,16 @@ const PostItem = ({post}: Props) => {
 			))}
 			<div dangerouslySetInnerHTML={{ __html: post.content }}/>
 		</div>
-        <div className={classes.buttonContainer}>
-        {post.previous &&
+		<div className={classes.buttonContainer}>
+			{post.previous &&
             <a href={`/post/${post.previous}`} className={classes.link}><FontAwesomeIcon icon={faAngleLeft} size={'2x'}/> Previous Post</a>
-        }
-        <span></span>
-        {post.next &&
+			}
+			<span></span>
+			{post.next &&
             <a href={`/post/${post.next}`} className={classes.link}>Next Post <FontAwesomeIcon icon={faAngleRight} size={'2x'}/></a>
-        }
-    </div>
-    </>
+			}
+		</div>
+	</>
 	)
 }
 
