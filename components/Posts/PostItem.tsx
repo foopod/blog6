@@ -21,7 +21,6 @@ const PostItem = ({title, date, tags, content}: Props) => {
               <span className={classes.tag} key={tag}>[{tag}]</span>
           ))}
           <div dangerouslySetInnerHTML={{ __html: content }}/>
-          <Signup />
         </div>
     )
 }

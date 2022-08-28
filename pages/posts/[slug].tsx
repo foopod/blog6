@@ -2,6 +2,8 @@ import Head from "next/head"
 import { useRouter } from "next/router"
 import Page from "../../components/Page/Page"
 import PostItem from "../../components/Posts/PostItem"
+import Signup from "../../components/Signup/Signup"
+import ScrollToTop from "../../components/Widgets/ScrollToTop"
 import PostType from "../../interface/Post"
 import { getAllPosts, getPostBySlug } from "../../lib/api"
 import markdownToHtml from "../../lib/remarkToHtml"
@@ -24,6 +26,8 @@ export default function Post({ post }: Props) {
       </Head>
       <Page>
         <PostItem title={post.title} content={post.content} date={post.date} tags={post.tags}/> 
+        <Signup />
+        <ScrollToTop />
       </Page>
     </>
   )

@@ -8,7 +8,7 @@ const styles = {
     background: white,
     padding: '2rem',
     boxShadow: '0 4px 8px 0 rgba(0,0,0,0.2)',
-    marginBottom: '6rem'
+    marginBottom: '2rem'
   },
   title: {
      fontSize: '2.5rem',

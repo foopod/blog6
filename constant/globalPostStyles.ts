@@ -1,4 +1,4 @@
-import { black, grey } from "./colors";
+import { black, darkGrey, grey, white } from "./colors";
 
 export const globalPostStyles = {
     'img':{
@@ -6,11 +6,11 @@ export const globalPostStyles = {
       display: 'block',
       width: '70%',
       imageRendering: 'pixelated',
-      padding: '1rem',
+      padding: '0.5rem',
       background: black
     },
     'pre':{
-      background: grey,
+      background: darkGrey,
       width: '100%',
       fontFamily: 'monospace',
       overflow: 'auto',
@@ -18,12 +18,23 @@ export const globalPostStyles = {
       marginLeft: '-2rem',
     },
     'code':{
-      background: grey,
+      background: darkGrey,
+      color: white,
+      fontSize: '0.8rem'
     },
     'a':{
       color: black
     },
-    'iframe':{
+    'iframe, video, table':{
       width: '100%'
+    },
+    'table':{
+      borderCollapse: 'collapse'
+    },
+    'td,th':{
+      border: '1px black solid',
+      padding: '0.2rem',
+      textAlign: 'center'
+      
     }
   }

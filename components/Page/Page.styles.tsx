@@ -1,6 +1,6 @@
 import { createUseStyles } from 'react-jss'
 import { grey } from '../../constant/colors'
-import { standardPageWidth } from '../../constant/jss-vars'
+import { headingfontFamily, standardFontFamily, standardPageWidth } from '../../constant/jss-vars'
 
 const styles = {
     '@font-face': [
@@ -16,7 +16,7 @@ const styles = {
         'html, body': {
             padding: 0,
             margin: 0,
-            fontFamily: 'FiraSans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif',
+            fontFamily: standardFontFamily,
             background: grey,
             color: '#1d1f21',
             fontWeight: '400',
@@ -25,7 +25,7 @@ const styles = {
             textRendering: 'geometricPrecision',
         },
         'h1,h2,h3,h4,h5,h6': {
-            fontFamily: 'Montserrat, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif',
+            fontFamily: headingfontFamily,
           }
     },
     container: {

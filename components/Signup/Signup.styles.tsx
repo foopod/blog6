@@ -4,7 +4,8 @@ import { headingfontFamily } from '../../constant/jss-vars'
 
 const styles = {
     container: {
-        textAlign: 'center'
+        textAlign: 'center',
+        margin: '4rem 0'
     },
     title:{
         marginTop: '4rem',
@@ -22,10 +23,11 @@ const styles = {
     submit:{
         width: '150px',
         composes: '$input',
-        border: `${grey} 2px solid`,
+        border: `${black} 2px solid`,
         borderLeft: '0px',
-        background: grey,
-        cursor: 'pointer'
+        background: black,
+        cursor: 'pointer',
+        color: white,
     }
 }
 
