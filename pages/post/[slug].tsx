@@ -14,6 +14,7 @@ type Props = {
 
 export default function Post({ post }: Props) {
 	const router = useRouter()
+
 	if (!router.isFallback && !post?.slug) {
 		return <></>
 	}

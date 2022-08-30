@@ -11,6 +11,13 @@ interface Props {
 const PostItem = ({ post }: Props) => {
 	const classes = useStyles()
 
+	const scrollToTop = () => {
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth',
+		})
+	}
+
 	return (
 		<>
 			<div className={classes.container}>
@@ -33,13 +40,21 @@ const PostItem = ({ post }: Props) => {
 			</div>
 			<div className={classes.buttonContainer}>
 				{post.previous && (
-					<a href={`/post/${post.previous}`} className={classes.link}>
+					<a
+						href={`/post/${post.previous}`}
+						onClick={scrollToTop}
+						className={classes.link}
+					>
 						<FontAwesomeIcon icon={faAngleLeft} size={'2x'} /> Previous Post
 					</a>
 				)}
 				<span></span>
 				{post.next && (
-					<a href={`/post/${post.next}`} className={classes.link}>
+					<a
+						href={`/post/${post.next}`}
+						onClick={scrollToTop}
+						className={classes.link}
+					>
 						Next Post <FontAwesomeIcon icon={faAngleRight} size={'2x'} />
 					</a>
 				)}
