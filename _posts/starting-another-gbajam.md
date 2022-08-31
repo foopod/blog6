@@ -57,7 +57,7 @@ And it would end up in the game like this...
 
 ![](/img/fairport.gif)
 
-I also got collision maps working when exported from Tiled which is cool. This was a great experience learning how to integrate external tooling in to my GBA game development process (which was actually super easy with the Butano make file).
+I also got collision maps working when exported from Tiled which is cool. This was a great experience learning how to integrate external tooling in to my GBA game development process (which was actually super easy with the Butano makefile).
 
 ### Uridium Clone
 
@@ -78,9 +78,9 @@ And boy is it fun seeing that little ship do it's little flip into a barrel roll
 
 ### Probe Life
 
-I was also inspired seeing a game called In Other Waters, where you explore the oceans using a very only a UI with Topographical maps and controls. As soon as I saw this I thought wow, that would be a cool way to make the most of the GBA's limited screen size.
+I was also inspired seeing a game called In Other Waters, where you explore the oceans using only a UI with Topographical maps and controls. As soon as I saw this I thought wow, that would be a cool way to make the most of the GBA's limited screen size.
 
-With the GBA I tend to avoid classical UI elements (health bars, score, etc.), they tend to take away from the game and can be hard to see. But I wouldn't have the problem if the game was all UI?!?!
+With the GBA I tend to avoid classical UI elements (health bars, score, etc.), they tend to take away from the game and can be hard to see. But I wouldn't have that problem if the game was all UI?!?!
 
 So I took the time to map out what this could look like. And came up with something I was pretty happy with.
 
@@ -136,7 +136,7 @@ This simple format can actually fit a wide variety of games.
 - **Rock paper scissors** - self explanatory, winner of the group gets the point
 - **Spelling Bee** - buzz in, first to correctly spell out loud gets the point
 - **Never have I ever** - holder finishes the sentence and everyone that has done the thing loses a point
-- **Entropy** - holder chooses a person to get no points this round, that person can choose someone else, continue until there is one person that hasn't been chosen. That person gets a point this round.
+- **Balancer** - holder chooses a person to get no points this round, that person can choose someone else, continue until there is one person that hasn't been chosen. That person gets a point this round.
 
 Please bare with me for this horribly rudimentary example.
 
