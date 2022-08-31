@@ -38,7 +38,12 @@ const PostItem = ({ post }: Props) => {
 						[{tag}]
 					</span>
 				))}
-				<div dangerouslySetInnerHTML={{ __html: post.content }} />
+				<div
+					className={
+						post.tags.indexOf('photography') === -1 ? classes.pixelated : ''
+					}
+					dangerouslySetInnerHTML={{ __html: post.content }}
+				/>
 				<Signup />
 			</div>
 			<div className={classes.buttonContainer}>

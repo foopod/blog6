@@ -22,6 +22,7 @@ const styles = {
 		},
 	},
 	image: {
+		imageRendering: 'crisp-edges',
 		height: '250px',
 		width: '100%',
 		objectFit: 'cover',

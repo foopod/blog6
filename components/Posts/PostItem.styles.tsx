@@ -36,6 +36,11 @@ const styles = {
 			padding: '0.5rem',
 		},
 	},
+	pixelated: {
+		'& img': {
+			imageRendering: 'pixelated',
+		},
+	},
 }
 
 export default createUseStyles(styles)

@@ -5,7 +5,6 @@ export const globalPostStyles = {
 		margin: 'auto',
 		display: 'block',
 		width: '100%',
-		imageRendering: 'pixelated',
 		background: black,
 		'@media (min-width: 768px)': {
 			width: '70%',
