@@ -12,17 +12,8 @@ const PostPreview = ({ post }: Props) => {
 	return (
 		<a href={`/post/${post.slug}`} className={classes.link}>
 			<div className={classes.container}>
-				{post.image && post.image.indexOf('webm') === -1 ? (
+				{post.image && (
 					<img alt="" className={classes.image} src={post.image} />
-				) : (
-					<video
-						autoPlay={true}
-						loop
-						preload={'auto'}
-						className={classes.image}
-					>
-						<source src={post.image} type="video/webm" />
-					</video>
 				)}
 				<div className={classes.textContainer}>
 					<h2 className={classes.title}>{post.title}</h2>

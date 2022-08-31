@@ -2,7 +2,7 @@
 title: Starting another GBA Jam
 description: How I got from my last gamejam entry LRO to where we are now. GBAJAM2022!
 date: '2022-08-31'
-image: 'https://s3.us-east-2.amazonaws.com/jonoshields.com/gbajam_cart.webm'
+image: '/img/jam_cart.gif'
 tags:
   - gamejam
   - gbagamejam2022
@@ -55,9 +55,7 @@ you more about what we do here.
 
 And it would end up in the game like this...
 
-<video autoplay loop >
-    <source src='https://s3.us-east-2.amazonaws.com/jonoshields.com/airport.webm' type='video/webm'/>
-</video>
+![](/img/fairport.gif)
 
 I also got collision maps working when exported from Tiled which is cool. This was a great experience learning how to integrate external tooling in to my GBA game development process (which was actually super easy with the Butano make file).
 
@@ -74,9 +72,7 @@ I also had a few ideas on how I could make it my own.
 
 I got as far as downloading some sample 3d models, rendering sprites in blender and putting together a small demo of flying the ship.
 
-<video autoplay loop >
-    <source src='https://s3.us-east-2.amazonaws.com/jonoshields.com/uridium_sample.webm' type='video/webm'/>
-</video>
+![](/img/uridium_sample.gif)
 
 And boy is it fun seeing that little ship do it's little flip into a barrel roll to turn around.
 
@@ -111,9 +107,7 @@ Fun fact - I even wrote a small optimizer using MSE to reduce the number of tile
 
 I made a tiny demo for this game too.
 
-<video autoplay loop >
-    <source src='https://s3.us-east-2.amazonaws.com/jonoshields.com/probe_life_sample.webm' type='video/webm'/>
-</video>
+![](/img/probe_life.gif)
 
 Some mock ups of what the delve system would look like for a creature...
 
@@ -146,9 +140,7 @@ This simple format can actually fit a wide variety of games.
 
 Please bare with me for this horribly rudimentary example.
 
-<video autoplay loop >
-    <source src='https://s3.us-east-2.amazonaws.com/jonoshields.com/trivia.webm' type='video/webm'/>
-</video>
+![](/img/trivia.gif)
 
 ### GBAJAM 2022
 
@@ -158,9 +150,7 @@ I plan to start posting more often though, so hopefully I can decide in the next
 
 Oh yeah, this year I am judging and I got to help out making the GBAJAM2022 demo cart.
 
-<video autoplay loop >
-    <source src='https://s3.us-east-2.amazonaws.com/jonoshields.com/gbajam_cart.webm' type='video/webm'/>
-</video>
+![](/img/jam_cart.gif)
 
 You can check that our [here](https://github.com/gbajam22/gbajam22.github.io).
 
