@@ -27,7 +27,6 @@ export default function Post({ post }: Props) {
 			</Head>
 			<Page>
 				<PostItem post={post} />
-
 				<Comments />
 			</Page>
 		</>

@@ -1,22 +1,26 @@
-import { useEffect } from 'react'
-import useStyles from './Comments.styles'
+import React, { useEffect, useRef } from 'react'
 
-export default function Comments() {
-	const classes = useStyles()
+const Comments: React.FC = () => {
+	const elementRef = useRef<HTMLDivElement>(null)
 
-	function componentDidMount() {
-		const script = document.getElementById('comments')
-		script?.setAttribute('crossorigin', 'anonymous')
-		script?.setAttribute('async', 'true')
-		script?.setAttribute('repo', 'foopod/blog6')
-		script?.setAttribute('issue-term', 'pathname')
-		script?.setAttribute('theme', 'boxy-light')
-		script?.setAttribute('src', 'https://utteranc.es/client.js')
-	}
-
+	// first load
 	useEffect(() => {
-		componentDidMount()
+		if (!elementRef.current) {
+			return
+		}
+
+		const scriptElem = document.createElement('script')
+		scriptElem.src = 'https://utteranc.es/client.js'
+		scriptElem.async = true
+		scriptElem.crossOrigin = 'anonymous'
+		scriptElem.setAttribute('repo', 'foopod/blog6')
+		scriptElem.setAttribute('issue-term', 'url')
+		scriptElem.setAttribute('label', 'blog-comment')
+		scriptElem.setAttribute('theme', 'boxy-light')
+		elementRef.current.appendChild(scriptElem)
 	}, [])
 
-	return <script id="comments" className={classes['@global']} />
+	return <section ref={elementRef} />
 }
+
+export default Comments
