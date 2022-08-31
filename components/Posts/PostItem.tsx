@@ -2,6 +2,8 @@ import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import PostType from '../../interface/Post'
 import { toShortFormat } from '../../utils/utils'
+import Signup from '../Signup/Signup'
+import ScrollToTop from '../Widgets/ScrollToTop'
 import useStyles from './PostItem.styles'
 
 interface Props {
@@ -37,6 +39,7 @@ const PostItem = ({ post }: Props) => {
 					</span>
 				))}
 				<div dangerouslySetInnerHTML={{ __html: post.content }} />
+				<Signup />
 			</div>
 			<div className={classes.buttonContainer}>
 				{post.previous && (
@@ -48,7 +51,7 @@ const PostItem = ({ post }: Props) => {
 						<FontAwesomeIcon icon={faAngleLeft} size={'2x'} /> Previous Post
 					</a>
 				)}
-				<span></span>
+				<ScrollToTop />
 				{post.next && (
 					<a
 						href={`/post/${post.next}`}

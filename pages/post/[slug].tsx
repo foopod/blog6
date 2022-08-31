@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
+import Comments from '../../components/Comments/Comments'
 import Page from '../../components/Page/Page'
 import PostItem from '../../components/Posts/PostItem'
 import Signup from '../../components/Signup/Signup'
@@ -26,8 +27,8 @@ export default function Post({ post }: Props) {
 			</Head>
 			<Page>
 				<PostItem post={post} />
-				<Signup />
-				<ScrollToTop />
+
+				<Comments />
 			</Page>
 		</>
 	)
