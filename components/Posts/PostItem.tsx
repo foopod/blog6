@@ -40,7 +40,7 @@ const PostItem = ({ post }: Props) => {
 				))}
 				<div
 					className={
-						post.tags.indexOf('photography') === -1 ? classes.pixelated : ''
+						post.tags?.indexOf('photography') === -1 ? classes.pixelated : ''
 					}
 					dangerouslySetInnerHTML={{ __html: post.content }}
 				/>
