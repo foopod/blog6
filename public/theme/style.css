@@ -94,3 +94,13 @@ main .pagination-loader-container {
 main .gsc-loading-image {
     background-image: url("https://github.githubassets.com/images/mona-loading-default.gif");
 }
+
+main {
+    padding: '1rem';
+}
+
+@media(min-width: 768px) {
+    main {
+        padding: '0';
+    }
+}
