@@ -1,5 +1,6 @@
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { darkGrey } from '../../constant/colors'
 import PostType from '../../interface/Post'
 import { toShortFormat } from '../../utils/utils'
 import Signup from '../Signup/Signup'
@@ -53,7 +54,8 @@ const PostItem = ({ post }: Props) => {
 						onClick={scrollToTop}
 						className={classes.link}
 					>
-						<FontAwesomeIcon icon={faAngleLeft} size={'2x'} /> Previous Post
+						<FontAwesomeIcon icon={faAngleLeft} size={'2x'} color={darkGrey} />{' '}
+						Previous Post
 					</a>
 				)}
 				<ScrollToTop />
@@ -63,7 +65,8 @@ const PostItem = ({ post }: Props) => {
 						onClick={scrollToTop}
 						className={classes.link}
 					>
-						Next Post <FontAwesomeIcon icon={faAngleRight} size={'2x'} />
+						Next Post{' '}
+						<FontAwesomeIcon icon={faAngleRight} size={'2x'} color={darkGrey} />
 					</a>
 				)}
 			</div>

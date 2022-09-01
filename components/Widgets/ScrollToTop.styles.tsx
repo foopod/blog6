@@ -10,6 +10,7 @@ const styles = {
 		fontFamily: headingfontFamily,
 		fontWeight: 'bold',
 		fontSize: '1.2rem',
+		padding: '0 1rem',
 	},
 }
 
