@@ -96,11 +96,11 @@ main .gsc-loading-image {
 }
 
 main {
-    padding: '1rem';
+    padding: 1rem;
 }
 
 @media(min-width: 768px) {
     main {
-        padding: '0';
+        padding: 0;
     }
 }
