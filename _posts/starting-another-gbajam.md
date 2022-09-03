@@ -1,7 +1,7 @@
 ---
 title: Starting another GBA Jam
 description: How I got from my last gamejam entry LRO to where we are now. GBAJAM2022!
-date: '2022-08-31'
+date: '2022-07-31'
 image: '/img/jam_cart.gif'
 tags:
   - gamejam
