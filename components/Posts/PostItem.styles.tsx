@@ -26,7 +26,7 @@ const styles = {
 	},
 	buttonContainer: {
 		display: 'flex',
-		justifyContent: 'space-between',
+		justifyContent: 'center',
 	},
 	link: {
 		display: 'flex',
@@ -39,6 +39,22 @@ const styles = {
 	pixelated: {
 		'& img': {
 			imageRendering: 'pixelated',
+		},
+	},
+	right: {
+		flex: '1',
+		display: 'flex',
+		justifyContent: 'center',
+		'& span': {
+			marginLeft: 'auto',
+		},
+	},
+	left: {
+		flex: '1',
+		display: 'flex',
+		justifyContent: 'center',
+		'& span': {
+			marginRight: 'auto',
 		},
 	},
 }

@@ -49,25 +49,41 @@ const PostItem = ({ post }: Props) => {
 			</div>
 			<div className={classes.buttonContainer}>
 				{post.previous && (
-					<a
-						href={`/post/${post.previous}`}
-						onClick={scrollToTop}
-						className={classes.link}
-					>
-						<FontAwesomeIcon icon={faAngleLeft} size={'2x'} color={darkGrey} />{' '}
-						Previous Post
-					</a>
+					<div className={classes.left}>
+						<span>
+							<a
+								href={`/post/${post.previous}`}
+								onClick={scrollToTop}
+								className={classes.link}
+							>
+								<FontAwesomeIcon
+									icon={faAngleLeft}
+									size={'2x'}
+									color={darkGrey}
+								/>{' '}
+								Previous Post
+							</a>
+						</span>
+					</div>
 				)}
 				<ScrollToTop />
 				{post.next && (
-					<a
-						href={`/post/${post.next}`}
-						onClick={scrollToTop}
-						className={classes.link}
-					>
-						Next Post{' '}
-						<FontAwesomeIcon icon={faAngleRight} size={'2x'} color={darkGrey} />
-					</a>
+					<div className={classes.right}>
+						<span>
+							<a
+								href={`/post/${post.next}`}
+								onClick={scrollToTop}
+								className={classes.link}
+							>
+								Next Post{' '}
+								<FontAwesomeIcon
+									icon={faAngleRight}
+									size={'2x'}
+									color={darkGrey}
+								/>
+							</a>
+						</span>
+					</div>
 				)}
 			</div>
 		</>
