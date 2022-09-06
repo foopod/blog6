@@ -54,7 +54,7 @@ main {
     --color-btn-primary-selected-bg: rgb(0, 0, 0);
     --color-btn-primary-selected-shadow: inset 0 1px 0 rgb(0 45 17 / 20%);
     --color-btn-primary-disabled-text: rgb(255 255 255 / 80%);
-    --color-btn-primary-disabled-bg: #94d3a2;
+    --color-btn-primary-disabled-bg: #57606a;
     --color-btn-primary-disabled-border: rgb(27 31 36 / 15%);
     --color-fg-default: #24292f;
     --color-fg-muted: #57606a;
