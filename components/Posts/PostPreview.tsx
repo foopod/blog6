@@ -17,15 +17,15 @@ const PostPreview = ({ post }: Props) => {
 				)}
 				<div className={classes.textContainer}>
 					<h2 className={classes.title}>{post.title}</h2>
-					<span className={classes.date}>
+					{/* <span className={classes.date}>
 						<time
 							dateTime={new Date(post.date).toISOString()}
 							itemProp="datePublished"
 						>
 							{toShortFormat(new Date(post.date))}
 						</time>
-					</span>
-					{post.tags && ' - '}
+					</span> */}
+					{/* {post.tags && ' - '} */}
 					{post.tags?.map((tag: string) => (
 						<span className={classes.tag} key={tag}>
 							[{tag}]

@@ -25,7 +25,7 @@ const PostItem = ({ post }: Props) => {
 		<>
 			<div className={classes.container}>
 				<h2 className={classes.title}>{post.title}</h2>
-				<span className={classes.date}>
+				{/* <span className={classes.date}>
 					<time
 						dateTime={new Date(post.date).toISOString()}
 						itemProp="datePublished"
@@ -33,7 +33,7 @@ const PostItem = ({ post }: Props) => {
 						{toShortFormat(new Date(post.date))}
 					</time>
 				</span>
-				{post.tags && ' - '}
+				{post.tags && ' - '} */}
 				{post.tags?.map((tag: string) => (
 					<span className={classes.tag} key={tag}>
 						[{tag}]
