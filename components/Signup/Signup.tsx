@@ -6,9 +6,11 @@ const Signup = () => {
 	return (
 		<form
 			className={classes.container}
+			method="POST"
 			name="signup"
 			netlify-honeypot="bot-field"
 			data-netlify="true"
+			action="/"
 		>
 			<p className={classes.title}>Want to get notified next time I post?</p>
 			<input
@@ -20,7 +22,7 @@ const Signup = () => {
 			/>
 			<p style={{ display: 'none' }}>
 				<label>
-					Don’t fill this out if you’re human: <input name="bot-field" />
+					Don't fill this out if you're human: <input name="bot-field" />
 				</label>
 			</p>
 			<input className={classes.submit} type="submit" value="Sign up" />
