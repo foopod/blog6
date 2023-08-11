@@ -36,7 +36,7 @@ The three rules we use to determine these states are...
 
 1. Birth - If a dead cell has exactly 3 neighbours, it becomes alive in the next iteration.
 2. Death - If an alive cell has more than 3 or less than 2 neighbours, it dies in the next iteration (this is often described as dying from overpopulation or loneliness).
-3. Statis - If an alive cell has exactly 2 or 3 neighbours, then it remains alive. And if a dead cell has anything other than 3 alive neighbours then it remains dead.
+3. Stasis - If an alive cell has exactly 2 or 3 neighbours, then it remains alive. And if a dead cell has anything other than 3 alive neighbours then it remains dead.
 
 As we will get into below, these three simple rules can result in some very interesting creations. You can see some of them [here](https://en.wikipedia.org/wiki/Conway's_Game_of_Life#Examples_of_patterns) on the Wikipedia page.
 
