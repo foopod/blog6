@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { darkGrey } from '../../constant/colors'
 import PostType from '../../interface/Post'
 import Signup from '../Signup/Signup'
-import ScrollToTop from '../Widgets/ScrollToTop'
 import useStyles from './PostItem.styles'
 
 import Prism from 'prismjs'
@@ -76,7 +75,6 @@ const PostItem = ({ post }: Props) => {
 						</span>
 					</div>
 				)}
-				<ScrollToTop />
 				{post.next && (
 					<div className={classes.right}>
 						<span>

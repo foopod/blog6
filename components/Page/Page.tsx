@@ -1,6 +1,7 @@
 import { ReactNode } from 'react'
 import Header from '../Header/Header'
 import useStyles from './Page.styles'
+import ScrollToTop from '../Widgets/ScrollToTop'
 
 interface Props {
 	children: ReactNode
@@ -12,6 +13,7 @@ const Page = ({ children }: Props) => {
 	return (
 		<>
 			<Header />
+			<ScrollToTop />
 			<div className={classes.container}>{children}</div>
 		</>
 	)

@@ -1,4 +1,4 @@
-import { faAnglesUp } from '@fortawesome/free-solid-svg-icons'
+import { faAngleUp } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import { darkGrey } from '../../constant/colors'
@@ -15,12 +15,8 @@ export default function ScrollToTop() {
 	}
 
 	return (
-		<div className={classes.container}>
-			<div onClick={scrollToTop}>
-				<span className={classes.goUp}>
-					<FontAwesomeIcon icon={faAnglesUp} size={'2x'} color={darkGrey} />
-				</span>
-			</div>
+		<div className={classes.container} onClick={scrollToTop}>
+			<FontAwesomeIcon icon={faAngleUp} size={'2x'} color={darkGrey}/>
 		</div>
 	)
 }

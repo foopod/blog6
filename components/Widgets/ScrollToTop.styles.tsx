@@ -5,13 +5,20 @@ const styles = {
 	container: {
 		textAlign: 'center',
 		cursor: 'pointer',
-	},
-	goUp: {
-		fontFamily: headingfontFamily,
-		fontWeight: 'bold',
-		fontSize: '1.2rem',
-		padding: '0 1rem',
-	},
+		position: 'fixed',
+		right: '3em',
+		bottom: '3em',
+		backgroundColor: 'white',
+		borderRadius: '50%',
+		height: '50px',
+		width: '50px',
+		padding: '0.8rem 0.5rem 0.2rem 0.5rem',
+		boxShadow: '0px 0px 5px gray',
+		zIndex: 1000,
+		'svg':{
+			paddingTop: '8px',
+		}
+	}
 }
 
 export default createUseStyles(styles)

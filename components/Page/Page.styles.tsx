@@ -37,6 +37,7 @@ const styles = {
 		margin: 'auto',
 		padding: '0rem',
 		maxWidth: standardPageWidth,
+		marginBottom: '8em',
 		'@media (min-width: 768px)': {
 			padding: '1rem',
 		},
