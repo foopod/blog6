@@ -32,4 +32,7 @@ export const globalPostStyles = {
 		imageRendering: 'pixelated',
 		width: '70%',
 	},
+	code:{
+		wordWrap: 'break-word'
+	}
 }
