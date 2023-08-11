@@ -6,10 +6,10 @@ const Signup = () => {
 	return (
 		<form
 			className={classes.container}
-			method="POST"
+			method="post"
 			name="signup"
 			netlify-honeypot="bot-field"
-			data-netlify="true"
+			data-netlify={true}
 			action="/"
 		>
 			<p className={classes.title}>Want to get notified next time I post?</p>
