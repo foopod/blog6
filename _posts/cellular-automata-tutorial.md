@@ -1,15 +1,22 @@
 --- 
-title: A tutorial for Cellular Automata in Godot
+title: Making Conway's Game of Life in Godot
 date: '2023-08-11'
 image: /img/conway_16.png
 tags: 
     - procgen
-description: Making Conway's Game of Life using Godot
+description: A tutorial using cellular automata
 ---
 
 I saw a great question on Reddit recently about how someone can get started with procedural generation in Godot. And as a fan of both, I thought it would be fun to give it a go and maybe make a bit of a tutorial.
 
 > Note: This will be done in Godot 4.1. If using an earlier version, the code might be a little different.
+
+And the end product will look something like this.
+
+<video autoplay muted loop>
+    <source src="/img/conway.mp4"  type="video/mp4"/>
+    Your browser does not support the video tag.
+</video>
 
 Let's get started with a question...
 
