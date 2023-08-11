@@ -7,7 +7,7 @@ tags:
 description: Making Conway's Game of Life using Godot
 ---
 
-I saw a great question on reddit recently about how someone can get started with procedural generation in Godot. And as a fan of both, I thought it would be fun to give it a go and maybe make a bit of a tutorial.
+I saw a great question on Reddit recently about how someone can get started with procedural generation in Godot. And as a fan of both, I thought it would be fun to give it a go and maybe make a bit of a tutorial.
 
 > Note: This will be done in Godot 4.1. If using an earlier version, the code might be a little different.
 
@@ -15,39 +15,39 @@ Let's get started with a question...
 
 ## What is Cellular Automata?
 
-And while I could try my best to explain it here. There are a number of people that have already done a better job than I could ever do. In particular I really like [this explanation](https://natureofcode.com/book/chapter-7-cellular-automata/) in The Nature of Code by Daniel Shiffman.
+And while I could try my best to explain it here. There are many people that have already done a better job than I could ever do. In particular, I like [this](https://natureofcode.com/book/chapter-7-cellular-automata/) explanation](https://natureofcode.com/book/chapter-7-cellular-automata/) in The Nature of Code by Daniel Shiffman.
 
 ## What are we going to be making today?
 
 I think at some point in every coder's life, you should have the pleasure of coding Conway's Game of Life. It is a deeply interesting Cellular Automaton algorithm that can create complex and interesting behaviour from just three simple rules.
 
-We start with a grid of cells where each cell can have one of two states. We will refer to this as alive and dead, although in code this is probably just be a boolean (true or false).
+We start with a grid of cells where each cell can have one of two states. We will refer to this as alive and dead, although in code this will probably just be a boolean (true or false).
 
 Each time we iterate over the grid the state of the cells will be determined by the state of their neighbours in the previous iteration.
 
-The three rules we use to determine these state are...
+The three rules we use to determine these states are...
 
 1. Birth - If a dead cell has exactly 3 neighbours, it becomes alive in the next iteration.
 2. Death - If an alive cell has more than 3 or less than 2 neighbours, it dies in the next iteration (this is often described as dying from overpopulation or loneliness).
 3. Statis - If an alive cell has exactly 2 or 3 neighbours, then it remains alive. And if a dead cell has anything other than 3 alive neighbours then it remains dead.
 
-As we will get into below, these three simple rules can result in some very interesting creations. You can see some of them [here](https://en.wikipedia.org/wiki/Conway's_Game_of_Life#Examples_of_patterns) on the wikipedia page.
+As we will get into below, these three simple rules can result in some very interesting creations. You can see some of them [here](https://en.wikipedia.org/wiki/Conway's_Game_of_Life#Examples_of_patterns) on the Wikipedia page.
 
 ## Let's get coding
 
 ### Godot Scene Set Up
 
-In Godot we are going to start out with a 2D scene.
+In Godot, we are going to start with a 2D scene.
 
 ![Creating a 2D Scene](/img/conway_1.png)
 
 The nice part about this particular problem is that we don't have to muck around in the editor and the UI too much. We should be able to create a single cell and then instance that as needed through code.
 
-The other nice thing we have going for us is that each new Godot project includes the Godot logo, lets just use that for an alive cell and turn the sprite off to represent a dead cell.
+The other nice thing we have going for us is that each new Godot project includes the Godot logo, let's just use that for an alive cell and turn the sprite off to represent a dead cell.
 
 ![Godot logo in our project folder](/img/conway_2.png)
 
-So lets create a new Sprite2D node under our Node2D at the root of our scene. Just click the + button and search for Sprite2D.
+So let's create a new Sprite2D node under our Node2D at the root of our scene. Just click the + button and search for Sprite2D.
 
 ![Added a sprite2d to our scene](/img/conway_3.png)
 
@@ -63,17 +63,17 @@ This is also probably a good time to save our scene for the first time. Before w
 
 ![After renaming our cell and game nodes](/img/conway_6.png)
 
-And now when we save our scene it will prompt use to name it 'game'. Since this is such a small project we will just save everything into the main directory of the project. But if you are working on something better, it might pay to organise files into a folder structure.
+And now when we save our scene it will prompt us to name it 'game'. Since this is such a small project we will just save everything into the main directory of the project. But if you are working on something better, it might pay to organise files into a folder structure.
 
 ![Save our game scene](/img/conway_7.png)
 
 ![Our newly saved scene in our filesystem](/img/conway_8.png)
 
-Now let's get our cell ready to be reused again and again to represent our grid. First lets make is smaller, after selecting the Cell the scene graph, look in the inspector for the transform section under Node2D and change the scale to 0.1.
+Now let's get our cell ready to be reused again and again to represent our grid. First let's make it smaller, after selecting the Cell in the scene graph, look in the inspector for the transform section under Node2D and change the scale to 0.1.
 
 ![Set the scale of our Sprite2D](/img/conway_9.png)
 
-Next we can save our little cell as it's own scene, this way we can reuse it as much as we like. Right-click on our cell in the scene graph and select 'Save Branch as Scene'
+Next, we can save our little cell as its own scene, this way we can reuse it as much as we like. Right-click on our cell in the scene graph and select 'Save Branch as Scene'.
 
 ![save branch as scene](/img/conway_10.png)
 
@@ -85,7 +85,7 @@ Now we can delete our cell from our game scene as we will be instantiating them 
 
 Great. Now we have a scene setup, the rest is just writing code.
 
-Right click on our Game node and choose 'Attach Script'. Make sure to use GDScript here and save this to the project folder too.
+Right-click on our Game node and choose 'Attach Script'. Make sure to use GDScript here and save this to the project folder too.
 
 You will be greeted with a screen that looks like this, and two default functions. The `_ready()` function will be called when the script first runs and the `_process(delta)` will be called each frame (the parameter delta is the time since the last frame was rendered).
 
@@ -106,7 +106,7 @@ var column_count : int = 80
 var cell_width: int = 15
 ```
 
-There are a few things happening here. Hopefully the bottom few make sense, this is just the number of rows and columns our grid will have, also the width of our cell sprite. The first one however uses `@export` this means that the variable will appear in the inspector, this is great because it means we can just drag and drop our cell scene onto this variable to set it (rather than having to type out its file path).
+A few things are happening here. Hopefully, the bottom few declarations make sense, this is just the number of rows and columns our grid will have, also the width of our cell sprite. The first one however uses `@export`, which means that the variable will appear in the inspector, this is great because it means we can just drag and drop our cell scene onto this variable to set it (rather than having to type out its file path).
 
 You can play around with any of these factors and the scale of the cell sprite, this is just what worked nicely for me with all the default project settings.
 
@@ -122,11 +122,11 @@ func _ready():
     pass
 ```
 
-Awesome let's try to run our game for the first time. You will probably get a prompty asking to choose what scene you want to use as your default scene. Make sure that you select the Game scene here.
+Awesome let's try to run our game for the first time. You will probably get a prompt asking you to choose what scene you want to use as your default scene. Make sure that you select the Game scene here.
 
 ![Selecting the default scene](/img/conway_15.png)
 
-Great we get a blank screen, but you should see all the x and y co-ordinates printed to the console output. Now to spawn our cells we just need to instantiate them, add them as a child to our scene and then set their position in the grid.
+Great we get a blank screen, but you should see all the x and y coordinates printed to the console output. Now to spawn our cells we just need to instantiate them, add them as a child to our scene and then set their position in the grid.
 
 ``` gdscript
 func _ready():
@@ -140,7 +140,7 @@ func _ready():
 
 Now if we run our game we should see a lovely grid of cells! Excellent!
 
-What we really want though is to randomly turn some on and some off when we start. We can use a random number generator to toggle their visibility here in our `_ready()` script.
+What we want though is to randomly turn some on and some off when we start. We can use a random number generator to toggle their visibility here in our `_ready()` script.
 
 ``` gdscript
 func _ready():
@@ -157,17 +157,15 @@ func _ready():
 
 Great we should now be looking at something like this.
 
-![Our grid of godot logo cells](/img/conway_16.png)
+![Our grid of Godot logo cells](/img/conway_16.png)
 
-The problem we are going to run into next is that we need to keep a reference to these cells and where they are in the grid so we can use the Game of Life rules on them. So lets add an array to keep track of everything.
-
-At the top we can add our array, we will call it matrix though, because it will end up being an array of arrays, otherwise known as a 2d matrix.
+The problem we are going to run into next is that we need to keep a reference to these cells and where they are in the grid so we can use the Game of Life rules on them. So let's add an array to keep track of everything.
 
 ``` gdscript
 var cell_matrix: Array = []
 ```
 
-And then for each column we make we can add an array to this matrix to represent the column, and for each cell we can just add the cell to the array that represents the cell.
+And then for each column we make we can add an array to this matrix to represent the column, and for each cell, we can just add the cell to the array that represents the cell.
 
 Something like this...
 
@@ -188,7 +186,7 @@ func _ready():
 
 We are making great progress. Although now we need to think a little bit about how we are going to implement our rules. One problem I can see us running into is that we aren't going to be able to just iterate over our grid and change the visible value of our cells. If we were to do this, then our rules would be applied to some cells before others and those changes would impact everything. The rules need to be applied to all cells at the same time.
 
-The easiest way to do this is to keep another array that stores the cells previous state while we go ahead and update them for their current state.
+The easiest way to do this is to keep another array that stores the cell's previous state while we go ahead and update them for their current state.
 
 And we might as well set this up the same as we do the other array. Our code should be looking something like this now...
 
@@ -225,7 +223,7 @@ func _process(delta):
 	pass
 ```
 
-You can also see that I added a print statement here. When we run the code we should not only see our cells, but in the console output we should see our nice array of trues and falses.
+You can also see that I added a print statement here. When we run the code we should not only see our cells, but in the console output, we should see our nice array of trues and falses.
 
 ![Arrays of true and false in the console output](/img/conway_17.png)
 
@@ -233,7 +231,7 @@ Is this going to be the most efficient implementation of Conway's Game of Life i
 
 Now that we are starting to think about what will happen each iteration we can start to lay out our `_process()` function.
 
-The first thing we want to do, is transfer the current state of the cells to our `previous_cell_states` matrix we made before. To do this, lets just copy it across in a couple of for loops.
+The first thing we want to do is transfer the current state of the cells to the `previous_cell_states` matrix we made before. To do this, let's just copy it across in a couple of loops.
 
 ``` gdscript
 func _process(delta):
@@ -247,7 +245,7 @@ func _process(delta):
 
 Grand!
 
-Next we can block out the rest of the code. We are going to need a function that determines a cells next state. We can make a placeholder function and finish off the rest of the `_process()` function while we are at it.
+Next, we can block out the rest of the code. We are going to need a function that determines a cell's next state. We can make a placeholder function and finish off the rest of the `_process()` function while we are at it.
 
 ```gdscript
 func get_next_state(column, row):
@@ -267,11 +265,11 @@ func _process(delta):
 
 This should give you a pretty good of how we are going to lay things out. We can break logic up into different functions and try not to do too much all at once.
 
-Something else we are going to need to consider is that at the edges of our grid we are going to run into problems. How do you calculate the next state of a cell on the edge? There will be neighbours outside of our array that will break our code.
+Something else we are going to need to consider is that at the edges of our grid, we are going to run into problems. How do you calculate the next state of a cell on the edge? There will be neighbours outside of our array that will break our code.
 
-An easy fix for this is set all the edges to be dead and never update them. This does mean that our life will essentially die when it gets to the edge, but it will also make everything else easy to calculate.
+An easy fix for this is to set all the edges to dead and never update them. This does mean that our life will essentially die when it gets to the edge, but it will also make everything else easy to calculate.
 
-Lets start with a simple function that can detect the edges of our grid.
+Let's start with a simple function that can detect the edges of our grid.
 
 ``` gdscript
 func is_edge(column, row):
@@ -292,7 +290,7 @@ if rng.randi_range(0,1) or is_edge(column, row):
     cell.visible = false
 ```
 
-That was easy, we just added it to our if statement in our `_ready()` function. Secondly we need to only update cells that aren't on the edge.
+That was easy, we just added it to our if statement in our `_ready()` function. Secondly, we need to only update cells that aren't on the edge.
 
 ``` gdscript
 # update current state
@@ -306,12 +304,12 @@ Here we added an if statement so we only update the cell using `get_next_state()
 
 Now we just need to sort out our `get_next_state()` function and we should be done.
 
-There are two things that we need to figure out the next state for a cell..
+There are two things that we need to figure out the next state of a cell.
 
-1. It's current state
+1. Its current state
 2. The number of neighbours it has that are alive
 
-The first is easy. The second might take some fanangaling.
+The first is easy. The second might take some finagling.
 
 Probably better to just extract it into a function.
 
@@ -326,7 +324,7 @@ func get_count_of_alive_neighbours(column, row):
 	return count
 ```
 
-Above we use two for loops to iterate over a 3x3 grid around our cell. Here x will go -1, 0, 1 and so will y. If x and y are both 0 at the same time, then we skip the cell, as it is just the count of the cells neighbours and doesn't include the cell itself.
+Above we use two for loops to iterate over a 3x3 grid around our cell. Here x will go -1, 0, 1 and so will y. If x and y are both 0 at the same time, then we skip the cell, as it is just the count of the cell's neighbours and doesn't include the cell itself.
 
 Great, now we can finally get to our logic that handles Conway's rules.
 
@@ -349,7 +347,7 @@ func get_next_state(column, row):
 	return current
 ```
 
-Hopefully with the comments it is easy enough to see how we handle death (alive cells that die from not enough or too many neighbours), birth (dead cells that come to life when they have exactly 3 neighbours) and stasis (where the state doesn't change).
+Hopefully, with the comments, it is easy enough to see how we handle death (alive cells that die from not enough or too many neighbours), birth (dead cells that come to life when they have exactly 3 neighbours) and stasis (where the state doesn't change).
 
 You can find the full code [here](https://github.com/foopod/godot-conways-game-of-life/blob/main/game.gd).
 
@@ -357,5 +355,3 @@ You can find the full code [here](https://github.com/foopod/godot-conways-game-o
     <source src="/img/conway.mp4"  type="video/mp4"/>
     Your browser does not support the video tag.
 </video>
-
-Enjoy!
