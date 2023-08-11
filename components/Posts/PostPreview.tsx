@@ -10,7 +10,7 @@ const PostPreview = ({ post }: Props) => {
 
 	return (
 		<a href={`/post/${post.slug}`} className={classes.link}>
-			<div className={classes.container}>
+			<article className={classes.container}>
 				{post.image && (
 					<img alt="" className={classes.image} src={post.image} />
 				)}
@@ -33,7 +33,7 @@ const PostPreview = ({ post }: Props) => {
 					<p>{post.description}</p>
 				</div>
 				<span className={classes.readTime}>{post.readTime}</span>
-			</div>
+			</article>
 		</a>
 	)
 }

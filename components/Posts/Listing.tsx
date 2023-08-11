@@ -10,11 +10,11 @@ const Listing = ({ posts }: Props) => {
 	const classes = useStyles()
 
 	return (
-		<div className={classes.container}>
+		<main className={classes.container}>
 			{posts.map((post) => (
 				<PostPreview key={post.slug} post={post} />
 			))}
-		</div>
+		</main>
 	)
 }
 
