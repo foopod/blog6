@@ -26,19 +26,19 @@ And while I could try my best to explain it here. Many people have already done 
 
 ## What are we going to be making today?
 
-I think at some point in every coder's life, you should have the pleasure of coding Conway's Game of Life. It is a deeply interesting Cellular Automaton algorithm that can create complex and interesting behaviour from just three simple rules.
+I think at some point in every coder's life, you should have the pleasure of coding Conway's Game of Life. It is a deeply interesting Cellular Automaton that can create complex and interesting behaviour from just three simple rules.
 
 We start with a grid of cells where each cell can have one of two states. We will refer to this as alive and dead, although in code this will probably just be a boolean (true or false).
 
-Each time we iterate over the grid the state of the cells will be determined by the state of their neighbours in the previous iteration.
+Each time we iterate over the grid, the state of the cells will be determined by the state of their neighbours in the previous iteration.
 
 The three rules we use to determine these states are...
 
 1. Birth - If a dead cell has exactly 3 neighbours, it becomes alive in the next iteration.
 2. Death - If an alive cell has more than 3 or less than 2 neighbours, it dies in the next iteration (this is often described as dying from overpopulation or loneliness).
-3. Stasis - If an alive cell has exactly 2 or 3 neighbours, then it remains alive. And if a dead cell has anything other than 3 alive neighbours then it remains dead.
+3. Stasis - In all other cases, what is alive stays alive and what is dead stays dead.
 
-As we will get into below, these three simple rules can result in some very interesting creations. You can see some of them [here](https://en.wikipedia.org/wiki/Conway's_Game_of_Life#Examples_of_patterns) on the Wikipedia page.
+As we will see later, these three simple rules can result in some very interesting creations. You can see some of them [here](https://en.wikipedia.org/wiki/Conway's_Game_of_Life#Examples_of_patterns) on the Wikipedia page.
 
 ## Let's get coding
 
@@ -70,7 +70,7 @@ This is also probably a good time to save our scene for the first time. Before w
 
 ![After renaming our cell and game nodes](/img/conway_6.png)
 
-And now when we save our scene it will prompt us to name it 'game'. Since this is such a small project we will just save everything into the main directory of the project. But if you are working on something better, it might pay to organise files into a folder structure.
+And now when we save our scene, it will prompt us to name it 'game'. Since this is such a small project we will just save everything into the main directory of the project. But if you are working on something better, it might pay to organise files into a folder structure.
 
 ![Save our game scene](/img/conway_7.png)
 
@@ -113,9 +113,9 @@ var column_count : int = 80
 var cell_width: int = 15
 ```
 
-A few things are happening here. Hopefully, the bottom few declarations make sense, this is just the number of rows and columns our grid will have, also the width of our cell sprite. The first one however uses `@export`, which means that the variable will appear in the inspector, this is great because it means we can just drag and drop our cell scene onto this variable to set it (rather than having to type out its file path).
+A few things are happening here. Hopefully, the bottom few declarations make sense, this is just the number of rows and columns our grid will have, also the width of our cell sprite. You can play around with any of these factors and the scale of the cell sprite, this is just what worked nicely for me with all the default project settings.
 
-You can play around with any of these factors and the scale of the cell sprite, this is just what worked nicely for me with all the default project settings.
+The first one however uses `@export`, which means that the variable will appear in the inspector, this is great because it means we can just drag and drop our cell scene onto this variable to set it (rather than having to type out its file path).
 
 ![Cell in the inspector view](/img/conway_14.png)
 
@@ -129,7 +129,7 @@ func _ready():
     pass
 ```
 
-Awesome let's try to run our game for the first time. You will probably get a prompt asking you to choose what scene you want to use as your default scene. Make sure that you select the Game scene here.
+Awesome let's try to run our game for the first time. You will probably get a prompt asking you to choose what scene you want to use as your default scene. We want to make sure that we choose the Game scene here, which should be the current one.
 
 ![Selecting the default scene](/img/conway_15.png)
 
@@ -157,7 +157,7 @@ func _ready():
 			var cell = cell_scene.instantiate()
 			self.add_child(cell)
 			cell.position = Vector2(column * cell_width, row * cell_width)
-			if(rng.randi_range(0,1)): # randompy generate 0s or 1s (these will be interpretted as true and false)
+			if(rng.randi_range(0,1)): # randomly generate 0s or 1s (these will be interpretted as true and false)
 				cell.visible = false # make some invisible	
 	pass
 ```
