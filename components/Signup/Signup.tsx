@@ -10,6 +10,7 @@ const Signup = () => {
 			name="newsletter"
 			netlify-honeypot="bot-field"
 			data-netlify="true"
+			action="/"
 		>
 			<p className={classes.title}>Want to get notified next time I post?</p>
 			<input
