@@ -11,7 +11,7 @@ I saw a great question on Reddit recently about how someone can get started with
 
 > Note: This will be done in Godot 4.1. If using an earlier version, the code might be a little different.
 
-And the end product will look something like this.
+We will be making Conway's Game of Life.
 
 <video autoplay muted loop controls>
     <source src="/img/conway.mp4"  type="video/mp4"/>
