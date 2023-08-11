@@ -46,6 +46,7 @@ Which is okay... nah, it is pretty shit. So I decided to style them up a bit mor
 
 ![](/img/van_3d.gif)
 
+
 I figured I could make a tool to generate the island in voxels. One problem though. After some research it seems like most voxel formats are proprietry or unnecessarily complicated (from the point of view of this project). I decided to instead use png images and made a set of images where each was a different layer of the 3d object.
 
 This also happens to be one of the 2 formats that SpriteStack.io accepts. Go figure.

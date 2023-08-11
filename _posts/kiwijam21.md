@@ -27,7 +27,7 @@ Queue maniacal laughter.
 
 I made a quick demo to see what it would look and feel like to hold and rotate the GBA.
 
-![](/img/loop.gif)
+<img src="/img/loop.gif" class="pixelated"/>
 
 This worked quite well, however I was scared that someone would drop my GBA trying to play the game. The working title became "Don't drop me".
 
@@ -41,7 +41,7 @@ I also realised that it would be fun to make all the games related, it would mak
 
 Having hotdogs on the brain I figured, maybe your food truck had rolled off the side of a road and was now tumbling down the hill.
 
-![](/img/rollin.gif)
+<img src="/img/rollin.gif" class="pixelated"/>
 
 Yep. Okay. That will do. I only had 48 hours, I couldn't waste too much on planning. Although I think sleeping on it definitely helped.
 
@@ -55,25 +55,25 @@ I decided on my first 4 games, these would at least get across the idea of the g
 
 A classic reaction game where you have to tap a button at the right moment to catch a falling bottle of mustard.
 
-![](/img/mustard.gif)
+<img src="/img/mustard.gif" class="pixelated"/>
 
 ### Dodge the Cutlery
 
 Dodge all the cutlery and utensils that are being thrown around the van as it rolls.
 
-![](/img/cutlery.gif)
+<img src="/img/cutlery.gif" class="pixelated"/>
 
 ### Button
 
 A trick level, where the correct action is not to press the button and open all the doors.
 
-![](/img/button.gif)
+<img src="/img/button.gif" class="pixelated"/>
 
 ### Buns
 
 Catch all the falling buns!
 
-![](/img/buns.gif)
+<img src="/img/buns.gif" class="pixelated"/>
 
 ## Setup
 
@@ -101,15 +101,15 @@ So instead of making more games, I switched into bug fix mode for the next hour.
 
 > I added Arrows to success/fail screens to prompt the rotation.
 
-![](/img/arrow.png)
+<img src="/img/arrow.png" class="pixelated"/>
 
 > I put the buttons that would be used on the loading screen.
 
-![](/img/buttons.png)
+<img src="/img/buttons.png" class="pixelated"/>
 
 > And I added some extra text to explain the level.
 
-![](/img/instructions.png)
+<img src="/img/instructions.png" class="pixelated"/>
 
 Some more play testing and I had a game that was fairly playable.
 
@@ -117,11 +117,11 @@ Okay great I had 4 hours left to add 3 more levels. Luckily I had some ideas on 
 
 For example I made 2 levels where you had to move an object into the right position...
 
-![](/img/plug.gif)
+<img src="/img/plug.gif" class="pixelated"/>
 
 I then reused this, but made it so that the target moved around, adding a bit of complexity.
 
-![](/img/dog.gif)
+<img src="/img/dog.gif" class="pixelated"/>
 
 ## Done
 

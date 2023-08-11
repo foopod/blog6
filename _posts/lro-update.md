@@ -67,7 +67,7 @@ Into my C++ code. If you are curious you can see the python3 script [here](https
 
 And now with 40 puzzles I need some way to select between them. The original game had 4 difficulty levels, so I figure I can do the same and seperate things out that way.
 
-![](/img/level-select.gif)
+<img src="/img/level-select.gif" class="pixelated"/>
 
 
 ## New Suitcase Select
@@ -76,7 +76,7 @@ Previously a player would have to use L and R to tab between suitcases to choose
 
 So the idea was to make a cursor you move around to select your luggage to move.
 
-![](/img/lro-select.gif)
+<img src="/img/lro-select.gif" class="pixelated"/>
 
 And wow. I thought it would be a better, but it is a lot more usable and makes solving puzzles a lot faster.
 
@@ -90,8 +90,7 @@ The first thing I wanted to do was make it more obvious that the red suitcase wa
 
 To add to this I made a mini tutorial to help new players get started. It takes you through it when you launch the game (if you haven't completed any levels). And can also be accessed anytime through the main menu.
 
-![](/img/help.gif)
-
+<img src="/img/help.gif" class="pixelated"/>
 
 ## The little things
 

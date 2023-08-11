@@ -24,13 +24,13 @@ Based on the last GBAJam that I did, I knew I had to reel in the scope. There we
 
 This summer (NZ) we are on the road travelling around New Zealand in our little car SoyBean. This means that while I have been able to recharge my phone and look at the jam page, I haven't been able to do any programming.
 
-![](/img/soybean.jpg)
+<img src="/img/soybean.jpg" class="pixelated"/>
 
 So instead I write code, data structures and come up with ideas the old fashioned way.
 
-![](/img/lro-1.jpg)
+<img src="/img/lro-1.jpg" class="pixelated"/>
 
-![](/img/lro-2.jpg)
+<img src="/img/lro-2.jpg" class="pixelated"/>
 
 I thought it might be interesting to compare one of the functions I wrote psuedocode for, with the implementation code.
 
@@ -98,13 +98,13 @@ Well. I have the following working...
 + tabbing through and moving luggage
 + collision logic
 
-![](/img/example.gif)
+<img src="/img/example.gif" class="pixelated"/>
 
 The idea is that you are an expertly trained Luggage Retrieval Officer, maneuver luggage in tight spaces to remove misplaced items from the aircraft before take off.
 
 I also made a pretty neat title screen.
 
-![](/img/title.png)
+<img src="/img/title.png" class="pixelated"/>
 
 ## What is next?
 

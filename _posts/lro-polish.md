@@ -19,21 +19,21 @@ But people expect more from games these days. And during development I kept havi
 
 What is so important that we need to train a specific role to retrieve it? 
 
-![](/img/lro2.png)
+<img src="/img/lro2.png" class="pixelated"/>
 
-![](/img/lro3.png)
+<img src="/img/lro3.png" class="pixelated"/>
 
 The possibilities are endless. There were also unanswered questions, like why are we always trying to get the red ones?
 
-![](/img/lro4.png)
+<img src="/img/lro4.png" class="pixelated"/>
 
 They could also be used to help along a beginning player.
 
-![](/img/lro1.png)
+<img src="/img/lro1.png" class="pixelated"/>
 
 This character, by the way, is your boss, a veteran Luggage Retrieval Officer that guides you as you progress through the ranks.
 
-![](/img/lro5.png)
+<img src="/img/lro5.png" class="pixelated"/>
 
 The first time play testing this was night and day, hearing the odd little chuckle from someone every now and then made adding the dialog so worthwhile. And I think that this is the single best thing I have done to make the game more memorable for people.
 
@@ -79,8 +79,7 @@ To me it felt weird to incentivise players to try to get the smallest number of 
 
 But again my play tester had proved me wrong. And this blew me away. He sat down and on his first go solved a hard puzzle in a few minutes only 2 moves over the best.
 
-
-![](/img/lro-grade.png)
+<img src="/img/lro-grade.png" class="pixelated"/>
 
 ## Other stuff
 
@@ -90,13 +89,13 @@ The first is some amazing music from [Tempest](https://soundcloud.com/janne-suni
 
 Secondly some fantastic title art from [Vent](https://csdb.dk/scener/?id=1073)
 
-![](/img/lro-intro.gif)
+<img src="/img/lro-intro.gif" class="pixelated"/>
 
 I redid a lot of backgrounds and added shading to all of the luggage sprites.
 
-![](/img/lro-select.gif)
+<img src="/img/lro-select.gif" class="pixelated"/>
 
-![](/img/gameplay-lro.gif)
+<img src="/img/gameplay-lro.gif" class="pixelated"/>
 
 ## Release
 
