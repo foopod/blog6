@@ -13,7 +13,7 @@ I saw a great question on Reddit recently about how someone can get started with
 
 And the end product will look something like this.
 
-<video autoplay muted loop>
+<video autoplay muted loop controls>
     <source src="/img/conway.mp4"  type="video/mp4"/>
     Your browser does not support the video tag.
 </video>
@@ -356,7 +356,7 @@ Hopefully, with the comments, it is easy enough to see how we handle death (aliv
 
 And now we can hit play again to see the finished product.
 
-<video autoplay muted loop>
+<video autoplay muted loop controls>
     <source src="/img/conway.mp4"  type="video/mp4"/>
     Your browser does not support the video tag.
 </video>
