@@ -21,11 +21,11 @@ I really had to get my a** into g.
 
 So I took my dungeon tile sheet, added a filter or three and threw some rocks in there.
 
-![](/img/tilemap_other.bmp)
+<img src="/img/tilemap_other.bmp" class="pixelated"/>
 
 Throw in a background and...
 
-![](/img/feline-2.png)
+<img src="/img/feline-2.png" class="pixelated"/>
 
 ## And a New Enemy
 
@@ -37,13 +37,13 @@ So this guy has a few cool features...
 + When they signal a teleport attack, they are invulnerable and lock onto your current position
 + Then they teleport inside you
 
-![](/img/feline-enemy.gif)
+<img src="/img/feline-enemy.gif" class="pixelated"/>
 
 To up the variety I also made a variation on my slime from earlier. I call it the bouncy slime.
 
 When you hit it you get pushed back a bunch, I also placed a couple in places you would get pushed off of your platform (maniacal laughter).
 
-![](/img/slime-bounce.gif)
+<img src="/img/slime-bounce.gif" class="pixelated"/>
 
 ## A new ability
 
@@ -55,7 +55,7 @@ So this new ability comes directly from another enemy imbued in pink.
 
 Teleporting.
 
-![](/img/teleport.gif)
+<img src="/img/teleport.gif" class="pixelated"/>
 
 It took a bit of work to make it feel as good as it does. Also math. Lots of math so you don't glitch through walls.
 
@@ -63,11 +63,11 @@ It took a bit of work to make it feel as good as it does. Also math. Lots of mat
 
 I added a couple of intro screens and a screen that shows if you die.
 
-![](/img/feline-4.png)
+<img src="/img/feline-4.png" class="pixelated"/>
 
-![](/img/feline-5.png)
+<img src="/img/feline-5.png" class="pixelated"/>
 
-![](/img/feline-3.png)
+<img src="/img/feline-3.png" class="pixelated"/>
 
 ## Sound Effects
 
@@ -108,6 +108,6 @@ Grab the final game [here on itch.io](https://foopod.itch.io/feline).
 
 And thanks a lot for following me on this adventure!
 
-![](/img/gif.gif)
+<img src="/img/gif.gif" class="pixelated"/>
 
 [tag for day-88](https://github.com/foopod/gbaGamejam2021/releases/tag/day-88) [.gba](https://github.com/foopod/gbaGamejam2021/releases/download/day-88/feline-day88.gba)

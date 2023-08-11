@@ -21,15 +21,15 @@ Using HBlank intervals we can come up with some very interesting effects. FYI th
 
 You can use move rows of an image back and forth using a sin wave, creating a distorted look to the image like this..
 
-![](/img/hblank.gif)
+<img src="/img/hblank.gif" class="pixelated"/>
 
 You can swap the palettes at hblank intervals, this shading effect has been used in a lot of games...
 
-![](/img/hblank-swap.gif)
+<img src="/img/hblank-swap.gif" class="pixelated"/>
 
 But today we are going to be trying to create a parallax effect from a single image. To do that we want to draw different parts of the image in different places on the screen.
 
-![](/img/hblank-parallax.gif)
+<img src="/img/hblank-parallax.gif" class="pixelated"/>
 
 We can even do some quite cool stuff, like making different lines move at different speeds.
 
@@ -90,14 +90,14 @@ for(int index = 0, limit = bn::display::height(); index < limit; ++index)
 
 So now we can turn this image...
 
-![](/img/title.bmp)
+<img src="/img/title.bmp" class="pixelated"/>
 
 Into this on the GBA...
 
-![](/img/parallax.gif)
+<img src="/img/parallax.gif" class="pixelated"/>
 
 Now just to add some minor other enhancements and my title screen is complete.
 
-![](/img/title-screen.gif)
+<img src="/img/title-screen.gif" class="pixelated"/>
 
 [tag for day-81](https://github.com/foopod/gbaGamejam2021/releases/tag/day-81) [.gba](https://github.com/foopod/gbaGamejam2021/releases/download/day-81/feline-day81.gba)

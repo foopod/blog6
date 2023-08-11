@@ -24,7 +24,7 @@ I called this demo Tacotown, I figured that the story could revolve around movin
 
 A year ago I revisited this game in my stint with Pico8. I want to try to make a hotdog builder. It had different ingredients and customers that would ask for their dog their way (even horrible ideas like a plain dog in a bun, no sauce!).
 
-![](/img/hotdog.gif)
+<img src="/img/hotdog.gif" class="pixelated"/>
 
 This idea though, was just a passing curiousity. I didn't even really finish it, I got distracted and didn't go back.
 
@@ -44,7 +44,7 @@ And with this I can export a 64 tile spritesheet in seconds.
 
 Below is what it looks like on gba after I have done some minor clean up (on some frames there are orphan pixels that I remove). This is the lowest res version, with lighting and dithering effects applied.
 
-![](/img/van_3d.gif)
+<img src="/img/van_3d.gif" class="pixelated"/>
 
 At this point I was amazed. This only took me a few hours (including programming the demo). Now this is a workflow I can get behind.
 
@@ -54,7 +54,7 @@ This all happened yesterday. Today I decided that I am going to go ahead and try
 
 I spent half my day on a quick menu screen and the other writing a design doc.
 
-![](/img/van-intro.gif)
+<img src="/img/van-intro.gif" class="pixelated"/>
 
 > Credit goes to Evan Bowman for the excellent font from his GBAJam21 entry [Skyland](https://github.com/evanbowman/skyland).
 
@@ -66,6 +66,6 @@ I am still trying to decide on a bunch of things. But I want to spend the next m
 
 I will leave you with a 1-bit version of the sprite I also managed to get looking quite nice...
 
-![](/img/van_bw.gif)
+<img src="/img/van_bw.gif" class="pixelated"/>
 
 This was done by rendering it out as full colour and using Aseprite to remap the palette down to black, white and middle grey. Then I replaced the grey with a simple 1-bit dither. 
