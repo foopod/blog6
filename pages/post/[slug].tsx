@@ -5,6 +5,7 @@ import PostItem from '../../components/Posts/PostItem'
 import PostType from '../../interface/Post'
 import { getAllPosts, getPostBySlug } from '../../lib/api'
 import markdownToHtml from '../../lib/remarkToHtml'
+import Comments from '../../components/Comments/Comments'
 
 type Props = {
 	post: PostType
@@ -28,6 +29,7 @@ export default function Post({ post }: Props) {
 			</Head>
 			<Page>
 				<PostItem post={post} />
+				<Comments />
 			</Page>
 		</>
 	)
