@@ -19,21 +19,21 @@ In the last post I talked about how important narrative was to me in this game.
 
 I decided to add stone tablets dotted around the level that the player could stop and read if they wanted.
 
-![](/img/stone-animation.gif)
+<img src="/img/stone-animation.gif" class="pixelated"/>
 
-![](/img/stone_tablet.bmp)
+<img src="/img/stone_tablet.bmp" class="pixelated"/>
 
 But I wanted it to be interesting. If people want to read they read books, but we are playing a video game here.
 
 To spice things up I decided to make up a language for these ancient people. I wasn't going to go to Tolkien lengths, instead I made a set of symbols that could directly map to english.
 
-![](/img/font.bmp)
+<img src="/img/font.bmp" class="pixelated"/>
 
 Simple yet effective. This meant that I could write my text in my map editor (Tiled) and simply swap the tileset to "translate" the words.
 
 I ended up making this kind of into a minigame where the player has to tap to focus in order to hold the translation steady.
 
-![](/img/stone.gif)
+<img src="/img/stone.gif" class="pixelated"/>
 
 Hopefully this makes reading a few short lore excerpts a tad more interesting.
 
@@ -41,7 +41,7 @@ It also gave me another idea. I figure that after seeing a few of these, the pla
 
 So in one place in the game I have tucked away a hidden message on a broken stone tablet that can't be translated. The player will have to grab a paper and pen, then use the previous tablets to solve it.
 
-![](/img/stone-2.gif)
+<img src="/img/stone-2.gif" class="pixelated"/>
 
 This is optional of course, but for the eager this is an extra challenge.
 

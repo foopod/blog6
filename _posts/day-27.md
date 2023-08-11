@@ -21,7 +21,7 @@ And without the distractions of the internet I have made a lot of progress in th
 
 Our story has to start somewhere, and the idea being that the bad guy broke in and kidnapped our hero's family. We should start there. At home.
 
-![](/img/home.gif)
+<img src="/img/home.gif" class="pixelated"/>
 
 Am I super happy with this level? No. But I am adding scope faster than I am finishing things, so this will have to do for now. You may have already seen a sneak peek at the next thing that is coming.
 
@@ -67,7 +67,7 @@ The constructor takes an `NPC_TYPE` enum and sets the sprite and `_lines` text t
 
 It ends up looking pretty good imo...
 
-![](/img/npc.gif)
+<img src="/img/npc.gif" class="pixelated"/>
 
 ### Minor things...
 
@@ -75,27 +75,27 @@ I am going through the process of trying to improve my sprite work. Some of this
 
 Layering backgrounds to add a parallax effect.
 
-![](/img/dungeon_layers.gif)
+<img src="/img/dungeon_layers.gif" class="pixelated"/>
 
 I also took some time to have a go animating the cat sprite again at a higher resolution. At the moment everything is at a 2x scale, so I figure I might as well try to make it look nicer.
 
 Sprite on the right is the original.
 
-![](/img/cat-sprite-v2.gif)
+<img src="/img/cat-sprite-v2.gif" class="pixelated"/>
 
 Okay, chonky leg boy. I know what you need...
 
-![](/img/cat-sprite-v3.gif)
+<img src="/img/cat-sprite-v3.gif" class="pixelated"/>
 
 Better. But cats have 4 legs, not 2.
 
-![](/img/cat-sprite-v4.gif)
+<img src="/img/cat-sprite-v4.gif" class="pixelated"/>
 
 Worse. Much worse. Okay, maybe time to give up on this and come back later when I have reference pictures.
 
 The last minor thing I added was a loading screen and the ability to transition between levels. Actually the only reason for the loading screen is because the transition between levels was too quick without it, it ended up being a pretty jolting experience without it.
 
-![](/img/loading.gif)
+<img src="/img/loading.gif" class="pixelated"/>
 
 Yeah, it is hella cute.
 
