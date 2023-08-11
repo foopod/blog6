@@ -172,7 +172,7 @@ The problem we are going to run into next is that we need to keep a reference to
 var cell_matrix: Array = []
 ```
 
-And then for each column we make we can add an array to this matrix to represent the column, and for each cell, we can just add the cell to the array that represents the cell.
+And then for each column, we add an array to this. And for each cell, we add it to the column array.
 
 Something like this...
 
@@ -195,7 +195,7 @@ We are making great progress. Although now we need to think a little bit about h
 
 The easiest way to do this is to keep another array that stores the cell's previous state while we go ahead and update them for their current state.
 
-And we might as well set this up the same as we do the other array. Our code should be looking something like this now...
+And we might as well set this up similarly to how we did the other one. Our code should be looking something like this now...
 
 ``` gdscript
 extends Node2D
@@ -234,7 +234,7 @@ You can also see that I added a print statement here. When we run the code we sh
 
 ![Arrays of true and false in the console output](/img/conway_17.png)
 
-Is this going to be the most efficient implementation of Conway's Game of Life in Godot? Probably not. But here I m aiming for readability over performance.
+Is this going to be the most efficient implementation of Conway's Game of Life in Godot? Probably not. But here we are aiming for readability over performance.
 
 Now that we are starting to think about what will happen each iteration we can start to lay out our `_process()` function.
 
@@ -249,8 +249,6 @@ func _process(delta):
 
     pass
 ```
-
-Grand!
 
 Next, we can block out the rest of the code. We are going to need a function that determines a cell's next state. We can make a placeholder function and finish off the rest of the `_process()` function while we are at it.
 
@@ -280,7 +278,7 @@ Let's start with a simple function that can detect the edges of our grid.
 
 ``` gdscript
 func is_edge(column, row):
-	return row == 0 or column == 0 or row == row_count-1 or column == column_count -1
+	return row == 0 or column == 0 or row == row_count - 1 or column == column_count - 1
 ```
 
 This returns true if the position is along the top, left, bottom or right edges of the grid.
@@ -311,7 +309,7 @@ Here we added an if statement so we only update the cell using `get_next_state()
 
 Now we just need to sort out our `get_next_state()` function and we should be done.
 
-There are two things that we need to figure out the next state of a cell.
+There are two things we need to figure out the future state of a cell.
 
 1. Its current state
 2. The number of neighbours it has that are alive
@@ -331,7 +329,7 @@ func get_count_of_alive_neighbours(column, row):
 	return count
 ```
 
-Above we use two for loops to iterate over a 3x3 grid around our cell. Here x will go -1, 0, 1 and so will y. If x and y are both 0 at the same time, then we skip the cell, as it is just the count of the cell's neighbours and doesn't include the cell itself.
+Above we use two for loops to iterate over a 3x3 grid around our cell. Here x will go -1, 0, 1 and so will y. If x and y are both 0 at the same time, then we skip the cell, as it shouldn't include the cell itself.
 
 Great, now we can finally get to our logic that handles Conway's rules.
 
@@ -355,6 +353,8 @@ func get_next_state(column, row):
 ```
 
 Hopefully, with the comments, it is easy enough to see how we handle death (alive cells that die from not enough or too many neighbours), birth (dead cells that come to life when they have exactly 3 neighbours) and stasis (where the state doesn't change).
+
+And now we can hit play again to see the finished product.
 
 <video autoplay muted loop>
     <source src="/img/conway.mp4"  type="video/mp4"/>
