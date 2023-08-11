@@ -4,10 +4,10 @@ export const globalPostStyles = {
 	img: {
 		margin: 'auto',
 		display: 'block',
-		maxWidth: '100%',
+		width: '100%',
 		background: black,
 		'@media (min-width: 768px)': {
-			maxWidth: '70%',
+			width: '70%',
 		},
 	},
 	a: {
