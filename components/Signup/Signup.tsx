@@ -12,6 +12,7 @@ const Signup = () => {
 			data-netlify={true}
 			action="/"
 		>
+			<input type='hidden' name='form-name' value='signup' />
 			<p className={classes.title}>Want to get notified next time I post?</p>
 			<input
 				className={classes.input}
