@@ -1,5 +1,4 @@
 import PostType from '../../interface/Post'
-import { toShortFormat } from '../../utils/utils'
 import useStyles from './PostPreview.styles'
 
 interface Props {

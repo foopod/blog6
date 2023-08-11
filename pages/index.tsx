@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Page from '../components/Page/Page'
 import Listing from '../components/Posts/Listing'
 import Post from '../interface/Post'
