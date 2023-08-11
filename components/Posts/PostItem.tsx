@@ -54,8 +54,7 @@ const PostItem = ({ post }: Props) => {
 						post.tags?.indexOf('photography') === -1 ? classes.pixelated : ''
 					}
 					dangerouslySetInnerHTML={{ __html: post.content }}
-				>
-					</main>
+				></main>
 				<Signup />
 			</div>
 			<div className={classes.buttonContainer}>
