@@ -22,7 +22,7 @@ Let's get started with a question...
 
 ## What is Cellular Automata?
 
-And while I could try my best to explain it here. Many people have already done a better job than I could ever do. In particular, I like [this](https://natureofcode.com/book/chapter-7-cellular-automata/) explanation](https://natureofcode.com/book/chapter-7-cellular-automata/) in The Nature of Code by Daniel Shiffman.
+And while I could try my best to explain it here. Many people have already done a better job than I could ever do. In particular, I like [this](https://natureofcode.com/book/chapter-7-cellular-automata/) explanation in The Nature of Code by Daniel Shiffman.
 
 ## What are we going to be making today?
 
