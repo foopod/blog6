@@ -27,7 +27,7 @@ I started noticing visible lag in the game once I had like 10+ enemies in a leve
 
 The first thing to do was turn on some debugging in Butano...
 
-```cpp
+``` cpp
 // init
 bn::fixed max_cpu_usage;
 int counter = 1;
@@ -51,7 +51,7 @@ Now I already knew of two things that would hugely help this. Yes. Let's stop do
 
 This wouldn't be so bad if their update loop was simpler, but I am doing collisions and all kinds of stuff in there.
 
-```cpp
+``` cpp
 for(Enemy& enemy : enemies){
     if(bn::abs(enemy.pos().x() - camera.x()) < 300){
         if(bn::abs(enemy.pos().y() - camera.y()) < 200){

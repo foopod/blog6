@@ -33,7 +33,7 @@ void CohesionRule::execute(bn::vector<Boid, 32>& boids){
     for(int i = 0; i < boids->size(); i++){
         centre += boids->at(i).pos();
     }
-    centre/= boids->size();
+    centre = boids->size();
 
     //apply to each boid
     for(int i = 0; i < boids->size(); i++){
@@ -48,7 +48,7 @@ Here you can see that we have a variable `_cohesion_force`, this is used to twea
 
 Boids shouldn't collide. This rule says that if you are too close to another boid, you should move away from it. Unfortunately this does mean that we have to do the calculation for each individual boid.
 
-```cpp
+``` cpp
 void SeparationRule::execute(bn::vector<Boid, 32>& boids){
     //  for each boid
     for(int i = 0; i < boids->size(); i++){
@@ -74,7 +74,7 @@ Here `_separation_distance` is the distance at which 'boids' should avoid gettin
 
 'Boids' that are close together should fly in the same direction. Within a certain distance, 'boids' should try to align themselves with their peers.
 
-```cpp
+``` cpp
 void AlignmentRule::execute(bn::vector<Boid, 32>& boids_ptr){
     bn::vector<Boid, 32>* boids = &boids_ptr;
 
@@ -123,7 +123,7 @@ It may not look as pleasing, but with the new AllRule step I can get a consisten
 
 When I wrote the three rules originally I didn't consider performance at all. In the Alignment step I call `boids->at(i).pos()` twice for each loop of `j`. So by caching that position I can save calling this a whole heap. It now looks like this...
 
-```cpp
+``` cpp
 void AlignmentRule::execute(bn::vector<Boid, 32>& boids){
 
     //  for each boid

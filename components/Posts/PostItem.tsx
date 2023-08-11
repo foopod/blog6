@@ -2,10 +2,16 @@ import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { darkGrey } from '../../constant/colors'
 import PostType from '../../interface/Post'
-import { toShortFormat } from '../../utils/utils'
 import Signup from '../Signup/Signup'
 import ScrollToTop from '../Widgets/ScrollToTop'
 import useStyles from './PostItem.styles'
+
+import Prism from 'prismjs'
+import { useEffect } from 'react'
+
+require('prismjs/components/prism-javascript')
+require('prismjs/components/prism-python')
+require('prismjs/components/prism-gdscript')
 
 interface Props {
 	post: PostType
@@ -20,6 +26,10 @@ const PostItem = ({ post }: Props) => {
 			behavior: 'smooth',
 		})
 	}
+
+	useEffect(() => {
+		Prism.highlightAll()
+	}, [])
 
 	return (
 		<>
@@ -39,12 +49,13 @@ const PostItem = ({ post }: Props) => {
 						[{tag}]
 					</span>
 				))}
-				<div
+				<main
 					className={
 						post.tags?.indexOf('photography') === -1 ? classes.pixelated : ''
 					}
 					dangerouslySetInnerHTML={{ __html: post.content }}
-				/>
+				>
+					</main>
 				<Signup />
 			</div>
 			<div className={classes.buttonContainer}>

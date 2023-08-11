@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import Comments from '../../components/Comments/Comments'
 import Page from '../../components/Page/Page'
 import PostItem from '../../components/Posts/PostItem'
 import PostType from '../../interface/Post'
@@ -18,6 +17,10 @@ export default function Post({ post }: Props) {
 		return <></>
 	}
 
+	// useEffect(() => {
+	// 	Prism.highlightAll()
+	// }, [])
+
 	return (
 		<>
 			<Head>
@@ -25,7 +28,6 @@ export default function Post({ post }: Props) {
 			</Head>
 			<Page>
 				<PostItem post={post} />
-				<Comments />
 			</Page>
 		</>
 	)
