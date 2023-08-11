@@ -36,11 +36,6 @@ const styles = {
 			padding: '0.5rem',
 		},
 	},
-	pixelated: {
-		'& img': {
-			imageRendering: 'pixelated',
-		},
-	},
 	right: {
 		flex: '1',
 		display: 'flex',

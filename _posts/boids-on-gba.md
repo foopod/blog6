@@ -99,7 +99,7 @@ Here `_alignment_distance` represents how close a bird should be in order to ali
 
 And what we get is something like this...
 
-![2d moving image of circles flying around the screen, grouping together, then disbanding](/img/boids.gif)
+<img alt="2d moving image of circles flying around the screen, grouping together, then disbanding" src="/img/boids.gif" class="pixelated"/>
 
 Now I can only get about 10 onto the screen and still hit 60fps, the example above is at 30fps.
 
@@ -117,7 +117,7 @@ Okay. The reason is that previously the alignment rule relies on all boids veloc
 
 It may not look as pleasing, but with the new AllRule step I can get a consistent 68% CPU and 60fps for 20 boids.
 
-![similar to previous moving image, but unfortunately the circles don't separate at all, they are just a moving mass](/img/megarule.gif)
+<img alt="similar to previous moving image, but unfortunately the circles don't separate at all, they are just a moving mass" src="/img/megarule.gif" class="pixelated"/>
 
 ### Attempt #2
 
@@ -149,13 +149,13 @@ void AlignmentRule::execute(bn::vector<Boid, 32>& boids){
 
 With this and similar improvements I can stick to 60fps (allbeit at 90% cpu usage) for the same number of boids.
 
-![similar to first image, but now they are moving cohesively](/img/optimise.gif)
+<img alt="similar to first image, but now they are moving cohesively" src="/img/optimise.gif" class="pixelated"/>
 
 ### Scatter
 
 Lastly I added a scatter rules so that I can dump a [.gba here](https://github.com/foopod/gba-boids/releases/download/release/boids.gba) and it actually be a little interactive (press 'a'). Hint, it is actually just the opposite of the Cohesion rules.
 
-![The circles all move away from the centre of the screen for a few seconds, then regroup after](/img/scatter.gif)
+<img alt="The circles all move away from the centre of the screen for a few seconds, then regroup after" src="/img/scatter.gif" class="pixelated"/>
 
 Also source code is available [here](https://github.com/foopod/gba-boids).
 

@@ -349,9 +349,11 @@ func get_next_state(column, row):
 
 Hopefully, with the comments, it is easy enough to see how we handle death (alive cells that die from not enough or too many neighbours), birth (dead cells that come to life when they have exactly 3 neighbours) and stasis (where the state doesn't change).
 
-You can find the full code [here](https://github.com/foopod/godot-conways-game-of-life/blob/main/game.gd).
-
 <video autoplay muted loop>
     <source src="/img/conway.mp4"  type="video/mp4"/>
     Your browser does not support the video tag.
 </video>
+
+I hope you had as much fun making this as I did. After doing something like this you should be ready to try out some other algorithms. Maybe next time we can use Cellular Automata to generate a dungeon like [this](https://blog.jrheard.com/procedural-dungeon-generation-cellular-automata).
+
+You can find the full code [here](https://github.com/foopod/godot-conways-game-of-life/blob/main/game.gd).

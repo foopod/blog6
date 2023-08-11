@@ -50,9 +50,9 @@ const PostItem = ({ post }: Props) => {
 					</span>
 				))}
 				<main
-					className={
-						post.tags?.indexOf('photography') === -1 ? classes.pixelated : ''
-					}
+					// className={
+					// 	post.tags?.indexOf('photography') === -1 ? classes.pixelated : ''
+					// }
 					dangerouslySetInnerHTML={{ __html: post.content }}
 				></main>
 				<Signup />

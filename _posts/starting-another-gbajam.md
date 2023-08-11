@@ -55,7 +55,7 @@ you more about what we do here.
 
 And it would end up in the game like this...
 
-![](/img/fairport.gif)
+<img src="/img/fairport.gif" class="pixelated"/>
 
 I also got collision maps working when exported from Tiled which is cool. This was a great experience learning how to integrate external tooling in to my GBA game development process (which was actually super easy with the Butano makefile).
 
@@ -72,7 +72,7 @@ I also had a few ideas on how I could make it my own.
 
 I got as far as downloading some sample 3d models, rendering sprites in blender and putting together a small demo of flying the ship.
 
-![](/img/uridium_sample.gif)
+<img src="/img/uridium_sample.gif" class="pixelated"/>
 
 And boy is it fun seeing that little ship do it's little flip into a barrel roll to turn around.
 
@@ -107,7 +107,7 @@ Fun fact - I even wrote a small optimizer using MSE to reduce the number of tile
 
 I made a tiny demo for this game too.
 
-![](/img/probe_life.gif)
+<img src="/img/probe_life.gif" class="pixelated"/>
 
 Some mock ups of what the delve system would look like for a creature...
 
@@ -140,7 +140,7 @@ This simple format can actually fit a wide variety of games.
 
 Please bare with me for this horribly rudimentary example.
 
-![](/img/trivia.gif)
+<img src="/img/trivia.gif" class="pixelated"/>
 
 ### GBAJAM 2022
 
@@ -150,7 +150,7 @@ I plan to start posting more often though, so hopefully I can decide in the next
 
 Oh yeah, this year I am judging and I got to help out making the GBAJAM2022 demo cart.
 
-![](/img/jam_cart.gif)
+<img src="/img/jam_cart.gif" class="pixelated"/>
 
 You can check that our [here](https://github.com/gbajam22/gbajam22.github.io).
 

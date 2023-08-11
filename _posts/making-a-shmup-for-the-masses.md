@@ -12,7 +12,7 @@ tags:
 
 Recently I watched an [interview](https://www.youtube.com/watch?v=PBRt2D2YN44) with Masahiro Sakurai, the designer of the original Kirby game among other amazing titles. He talks a bit about the history of platformers and how at that point in time games in general were made to be difficult. Not just for the sake of it mind you, catridges had limited sizes and developers could only fit so much content in there, so to be able to make a longer format game you had to make it hard.
 
-![](/img/Kirby.gif)
+<img src="/img/Kirby.gif" class="pixelated"/>
 
 He wanted the game to be accessible and a market differentiator that could attract new people into the world of gaming. So not only were you given these fun and interesting skills where you can suck in enemies and spitting them out at other ones, but you you could also just suck in air, then float over the platforms gaps and enemies heads.
 

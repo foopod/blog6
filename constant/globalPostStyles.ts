@@ -4,10 +4,10 @@ export const globalPostStyles = {
 	img: {
 		margin: 'auto',
 		display: 'block',
-		width: '100%',
+		maxWidth: '100%',
 		background: black,
 		'@media (min-width: 768px)': {
-			width: '70%',
+			maxWidth: '70%',
 		},
 	},
 	a: {
@@ -27,5 +27,9 @@ export const globalPostStyles = {
 	blockQuote:{
 		borderLeft: '3px gray solid',
 		paddingLeft: '5px'
-	}
+	},
+	'.pixelated': {
+		imageRendering: 'pixelated',
+		width: '70%',
+	},
 }
