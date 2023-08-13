@@ -263,7 +263,7 @@ Well, it is exactly what we asked for, we just haven't allowed for any gaps betw
 
 Let's generate some padding for the 4 edges of our room. And add a quick function to see if a cell in our room is inside the padding region.
 
-For padding, we will just use a `Vector4i`. Below we are randomizing to either 2 or 3 cells of padding.
+For padding, we will just use a `Vector4i`, one value for each of up, down, left and right. Below we are randomizing to either 2 or 3 cells of padding.
 
 ``` gdscript
 var padding = Vector4i(
