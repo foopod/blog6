@@ -31,7 +31,7 @@ Our end result will look a little something like this.
 
 ## Coding our Tree
 
-The first thing we are going to need is agdscript data structure to form our tree.
+The first thing we are going to need is a data structure to form our tree.
 
 We can start by implementing a single branch. The idea is that the root of our tree can be a branch, and each branch can have either zero or two child branches.
 
