@@ -168,14 +168,14 @@ func split(remaining):
 
 A few things about the above code...
 
-- We cast the split to an `int`, this is so that it makes it easier to swap out each 1x1 for a tile in our tilemap later.
+- We are trying to keep everything as `ints`, this is so that it makes it easier to swap out each 1x1 for a tile in our tilemap later.
 - We recursively split cells until `remaining` is zero. This means we only have to call `split(5)` on the root node, and it will give us 32 rooms.
 
 Great! Now let's call this in our game's `_ready()` function.
 
 ``` gdscript
 func _ready():
-	root_node  = Branch.new(Vector2i(0,0), Vector2i(60,30))
+	root_node  = Branch.new(Vector2i(0, 0), Vector2i(60, 30))
 	root_node.split(5)
 	queue_redraw()
 	pass 
@@ -237,9 +237,9 @@ tilemap.set_cell(layer, coords, source_id, atlas_coords)
 ```
 
 - `layer` - The layer in the tilemap, we will be leaving this as zero, but you might want to change this if you are using multiple layers
-- `coords` - The coordinates of the cell being set in the tilemap
+- `coords` - The coordinates of the cell set in the tilemap
 - `source_id` - The ID of the atlas we will be drawing the tiles from
-- `atlas_coords` - The coordinates of the tile being used in the tile atlas
+- `atlas_coords` - The coordinates of the tile in the tile atlas
 
 Let's add this to our `_draw()` function.
 
@@ -249,6 +249,7 @@ func _draw():
         for x in range(leaf.size.x):
             for y in range(leaf.size.y):
                 tilemap.set_cell(0, Vector2i(x + leaf.position.x,y + leaf.position.y), 2, Vector2i(2, 2))
+                # here Vector2i(2, 2) is where our floor is in the tileset we are using
     pass
 ```
 
