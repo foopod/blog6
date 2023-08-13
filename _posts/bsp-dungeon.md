@@ -135,7 +135,7 @@ Now we can start splitting our space up into rooms. In our `Branch` class, we ca
 
 We will be using a random number generator to decide the percentage to use when splitting the space. And we can use the aspect ratio to decide whether we split it horizontally or vertically, this prevents our rooms from being too narrow.
 
-Just a note, because we can split on the horizontal or vertical, the left_child will always be the left or top, with the right_child always being the right or bottom.
+Just a note, because we can split on the horizontal or vertical, the `left_child` will always be the left or top, with the `right_child` always being the right or bottom.
 
 ``` gdscript
 func split(remaining):
