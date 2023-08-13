@@ -78,7 +78,7 @@ Until you have a nice big list of all the leaves in your tree.
 
 Next, we could start writing the core of our logic, splitting each cell recursively. But we already have everything we need to start drawing our scene. Let's begin there, then when we start splitting we will be able to see what is happening.
 
-For this our scene can be super simple, let's just start with a Node2D and attach a script.
+For this, our scene can be super simple, let's just start with a Node2D and attach a script.
 
 
 ``` gdscript
@@ -104,7 +104,7 @@ These can be pretty simple for now too. In our `_ready()` function we just creat
 
 ``` gdscript
 func _ready():
-    root_node  = Branch.new(Vector2i(0, 0), Vector2i(60, 30)) # in tiles - so 60 tiles wide and 30 tall
+    root_node  = Branch.new(Vector2i(0, 0), Vector2i(60, 30)) # 60 tiles wide and 30 tall
     queue_redraw()
     pass
 ```
@@ -133,7 +133,7 @@ Great! Let's see how that looks.
 
 Now we can start splitting our space up into rooms. In our `Branch` class, we can add a function called `split()`, this will split the current branch into two.
 
-We will be using a random number generator to decide how the percentage to use when splitting the space. And we can use the aspect ratio to decide whether we split it horizontally or vertically, this prevents our rooms from being too narrow.
+We will be using a random number generator to decide the percentage to use when splitting the space. And we can use the aspect ratio to decide whether we split it horizontally or vertically, this prevents our rooms from being too narrow.
 
 Just a note, because we can split on the horizontal or vertical, the left_child will always be the left or top, with the right_child always being the right or bottom.
 
