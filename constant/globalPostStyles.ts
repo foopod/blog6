@@ -33,6 +33,17 @@ export const globalPostStyles = {
 		width: '70%',
 	},
 	code:{
-		wordWrap: 'break-word'
-	}
+		wordWrap: 'break-word',
+		backgroundColor: '#282a36',
+		color: 'white',
+		padding: '2px 8px',
+		margin: '0 2px',
+		borderRadius: '5px',
+	},
+	pre:{
+		'& code':{
+			padding: '0 !important',
+			fontSize: '16px',
+		}
+	},
 }

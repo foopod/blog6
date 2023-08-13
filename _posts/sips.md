@@ -38,7 +38,7 @@ I also found some great music and background chatter that I could use to really 
 
 After quite a bit of work I had something working that I was really proud of.
 
-<video src="/img/sips_old.mp4" autoplay="true" controls="true"> </video>
+<video src="/img/sips_old.mp4" autoplay="true" controls="true" muted> </video>
 
 But with still nearly 2 weeks of the jame to go I decided that I could try to add more.
 
