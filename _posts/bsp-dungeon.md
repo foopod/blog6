@@ -300,7 +300,7 @@ func _draw():
     pass
 ```
 
-I have left the green rectangle drawing on, this is handy for debugging until we have everything working.
+I have left the green rectangle drawing on for now, this is handy for debugging until we have everything working.
 
 ![This is the first time we can see individual rooms](/img/first_time_rooms.png)
 
@@ -308,16 +308,14 @@ Now all we need to do is link the rooms up. The easiest way to do this is to dra
 
 ![Example of what paths would look like between](/img/bsp_paths.png)
 
-The first step is to figure out the centre of these leaves, let's add a function to our `branch.gd` to do this.
+The first step is to figure out the centre of each room, let's add a function to our `branch.gd` to do this.
 
 ``` gdscript
 func get_center():
 	return Vector2i(position.x + size.x / 2, position.y + size.y / 2)
 ```
 
-Now we need to figure out how to connect the centres. I am sure there are better ways, but this made sense to me...
-
-We are going to make a paths array and pass it into our `Branch.split()` function.
+Now we need to figure out how to connect the centres. We are going to make a paths array and pass it into our `Branch.split()` function.
 
 Something like `Branch.split(remaining, paths)`.
 
